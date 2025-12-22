@@ -4,15 +4,26 @@ function normalizeForSearch(input) {
     let s = String(input).normalize('NFC');
     // collapse whitespace
     s = s.replace(/\s+/g, ' ').trim();
+    
+    // remove zero-width characters (joiners/non-joiners) that can break matching
+    s = s.replace(/[\u200B-\u200D\uFEFF]/g, '');
 
     // map common Arabic/Persian/Kurdish variants to canonical forms
     const map = [
+        // Kurdish-specific normalizations (most important for Kurdish users)
+        [/\u0647/g, '\u06D5'], // Arabic Heh (ه) -> Kurdish Ae (ە) - CRITICAL for Kurdish search
+        
+        // Standard Arabic/Persian to Kurdish/Persian normalizations
         [/\u064A/g, '\u06CC'], // Arabic Yeh (ي) -> Farsi/Kurdish Yeh (ی)
         [/\u0643/g, '\u06A9'], // Arabic Kaf (ك) -> Persian Kaf (ک)
-        [/\u0622/g, '\u0627'], // Alef Madda -> Alef
-        [/\u0623/g, '\u0627'], // Alef with Hamza above -> Alef
-        [/\u0625/g, '\u0627'], // Alef with Hamza below -> Alef
-        [/[,؛،.\-\/()\[\]]/g, ''] // remove common punctuation
+        
+        // Alef variants to canonical Alef
+        [/\u0622/g, '\u0627'], // Alef Madda (آ) -> Alef (ا)
+        [/\u0623/g, '\u0627'], // Alef with Hamza above (أ) -> Alef (ا)
+        [/\u0625/g, '\u0627'], // Alef with Hamza below (إ) -> Alef (ا)
+        
+        // Remove all punctuation and special characters
+        [/[,؛،.:\-_\/\\()\[\]{}'"«»`~!@#$%^&*+=|<>?]/g, '']
     ];
     map.forEach(([re, repl]) => { s = s.replace(re, repl); });
 
