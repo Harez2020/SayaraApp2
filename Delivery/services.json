@@ -284,5 +284,72 @@
     "workHours": "",
     "image": "img/mr_hybrid.jpg",
     "whatsapp": "9647702233366"
+  },
+
+  {
+    "id": 27,
+    "title": "Service Rawand",
+    "preview": "بۆ خزمەتگوزاری ئۆ...",
+    "description": "بۆخزمەتگوزاری ئۆتۆمبێل",
+    "location": "سلێمانی",
+    "phones": ["07704947966"],
+    "workHours": "",
+    "image": "img/ServiceRawand.jpg",
+    "whatsapp": "9647704947966"
+  },
+  {
+    "id": 28,
+    "title": "2فیتەری گەڕۆک",
+    "preview": "بۆگۆڕینی فیت پەمپ و بانص و...",
+    "description": "بۆگۆڕینی فیت پەمپ و بانص و ڕۆنگۆڕین و سێرفزی گشتی",
+    "location": "سلێمانی",
+    "phones": ["07702482483", "07501183150"],
+    "workHours": "",
+    "image": "img/FitaryGarok2.jpg",
+    "whatsapp": "9647702482483"
+  },
+  {
+    "id": 29,
+    "title": "فیتەر و ڕۆنگۆڕو پاتری گەڕۆک",
+    "preview": "فیتەرو ڕۆنگۆڕو...",
+    "description": "فیتەر و ڕۆنگۆڕوو پاتری گەڕۆک 24 کاتژمێر لەخزمەتی هاوڵاتیان داین",
+    "location": "سلێمانی",
+    "phones": ["07709133032"],
+    "workHours": "٢٤کاتژمێر",
+    "image": "img/FitarwRongorwPatryGarok.jpg",
+    "whatsapp": "9647709133032"
+  },
+  {
+    "id": 30,
+    "title": "فیتەر و فیت پەمپی گەڕۆک",
+    "preview": "بۆ چاکردنی هەموو...",
+    "description": "بۆچاکردنی هەموو جۆرە سەیارەیەک",
+    "location": "سلێمانی",
+    "phones": ["07501264929", "07701478880"],
+    "workHours": "",
+    "image": "img/FitarwFitpampyGarok.jpg",
+    "whatsapp": "9647501264929"
+  },
+  {
+    "id": 31,
+    "title": "کرێن فلات",
+    "preview": "بۆ گواستنەوەی ئۆتۆمبێل",
+    "description": "بۆ گواستنەوەی ئۆتۆمبێل",
+    "location": "سلێمانی",
+    "phones": ["07702225462", "07501461210"],
+    "workHours": "",
+    "image": "img/KrenFlatZard.jpg",
+    "whatsapp": "9647702225462"
+  },
+  {
+    "id": 32,
+    "title": "Twing Truck",
+    "preview": "بۆ گواستنەوەی ئۆتۆمبێل",
+    "description": "بۆ گواستنەوەی ئۆتۆمبێل",
+    "location": "سلێمانی",
+    "phones": ["07701568707"],
+    "workHours": "",
+    "image": "img/TwinTruck.jpg",
+    "whatsapp": "9647701568707"
   }
 ]
