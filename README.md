@@ -71,5 +71,3 @@ The project is optimized for **Vercel**. Simply connect the repository to Vercel
 This project is for internal use. All rights reserved.
 
 ---
-
-_Created with ❤️ for the car community in Kurdistan._
