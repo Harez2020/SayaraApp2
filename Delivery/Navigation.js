@@ -39,6 +39,8 @@ function renderMobileNav() {
         activePage = 'social';
     } else if (path.includes('/AboutUs/')) {
         activePage = 'about';
+    } else if (path.includes('/ContactUs/')) {
+        activePage = 'contact';
     } else if (path.includes('/Share/')) {
         activePage = 'share';
     } else if (path.includes('privacy.html')) {
@@ -59,6 +61,7 @@ function renderMobileNav() {
       form: "داواکردن",
       social: "سۆشیاڵ",
       about: "دەربارە",
+      contact: "پەیوەندی",
       share: "بڵاوکردنەوە",
       privacy: "پاراستن",
       terms: "مەرجەکان"
@@ -100,6 +103,10 @@ function renderMobileNav() {
             <a href="../AboutUs/" class="menu-item ${isActive('about')}">
               <div class="menu-icon" style="background: linear-gradient(135deg, #43e97b, #38f9d7);">ℹ️</div>
               <span>${t.about}</span>
+            </a>
+            <a href="../ContactUs/" class="menu-item ${isActive('contact')}">
+                <div class="menu-icon" style="background: linear-gradient(135deg, #FF9800, #F44336);">📞</div>
+                <span>${t.contact}</span>
             </a>
             <a href="../Share/" class="menu-item ${isActive('share')}">
               <div class="menu-icon" style="background: linear-gradient(135deg, #fa709a, #fee140);">📤</div>

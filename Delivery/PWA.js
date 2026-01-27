@@ -1,6 +1,3 @@
-/**
- * PWA INSTALL PROMPT LOGIC
- */
 let deferredPrompt;
 
 window.addEventListener('beforeinstallprompt', (e) => {
@@ -19,7 +16,11 @@ window.addEventListener('beforeinstallprompt', (e) => {
 });
 
 function showInstallPromotion() {
-    // Check if user has dismissed it recently (optional, let's just show it for now)
+    // Check if banner already exists
+    if (document.getElementById('pwaBanner')) return;
+
+    // Check if user has dismissed it recently
+    if (localStorage.getItem('pwaDismissed')) return;
 
     // Use translations if available
     const t = (window.translations && window.translations.kds && window.translations.kds.pwa) ? window.translations.kds.pwa : {
@@ -67,6 +68,6 @@ window.dismissPWA = function() {
     if(banner) {
         banner.style.display = 'none';
         // Save to localStorage so we don't annoy the user immediately again
-        // localStorage.setItem('pwaDismissed', 'true'); // Uncomment if you want persistence
+        localStorage.setItem('pwaDismissed', 'true');
     }
 };

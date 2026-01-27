@@ -1,4 +1,4 @@
-const CACHE_NAME = 'sayara-app-v10';
+const CACHE_NAME = 'sayara-app-v11';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
@@ -47,11 +47,37 @@ self.addEventListener('install', (event) => {
 });
 
 self.addEventListener('fetch', (event) => {
-  event.respondWith(
-    caches.match(event.request).then((response) => {
-      return response || fetch(event.request);
-    })
-  );
+  // HTML pages: Network First, fall back to cache
+  if (event.request.mode === 'navigate' || event.request.headers.get('accept').includes('text/html')) {
+    event.respondWith(
+      fetch(event.request)
+        .then((networkResponse) => {
+          return caches.open(CACHE_NAME).then((cache) => {
+            cache.put(event.request, networkResponse.clone());
+            return networkResponse;
+          });
+        })
+        .catch(() => {
+          return caches.match(event.request).then((cachedResponse) => {
+             // Fallback to offline.html if you had one, or just the cached index
+             return cachedResponse || caches.match('./index.html');
+          });
+        })
+    );
+  } else {
+    // Static assets: Stale-While-Revalidate
+    event.respondWith(
+      caches.match(event.request).then((cachedResponse) => {
+        const fetchPromise = fetch(event.request).then((networkResponse) => {
+          return caches.open(CACHE_NAME).then((cache) => {
+             cache.put(event.request, networkResponse.clone());
+             return networkResponse;
+          });
+        });
+        return cachedResponse || fetchPromise;
+      })
+    );
+  }
 });
 
 self.addEventListener('activate', (event) => {
