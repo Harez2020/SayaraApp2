@@ -14,6 +14,14 @@
     {
       "source": "/",
       "destination": "/Delivery/index.html"
+    },
+    {
+      "source": "/(style.css|mobile.css|mobile_utf8.css|services.js|slider.js|translations.js|Navigation.js|PWA.js|sw.js|services.json|manifest.json)",
+      "destination": "/Delivery/$1"
+    },
+    {
+      "source": "/img/(.*)",
+      "destination": "/Delivery/img/$1"
     }
   ]
 }
