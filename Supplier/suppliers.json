@@ -1,0 +1,1157 @@
+﻿[
+    {
+        "id":  1,
+        "title":  "ئیبراهیم فەرهاد / مەحمود ف یابانی",
+        "description":  "سەنی، تیدا، لاکشمیبای، مایکرۆ و نیسان.",
+        "location":  "هەولێر",
+        "phones":  [
+                       "7504097744",
+                       "7503959559"
+                   ],
+        "workHours":  " ",
+        "image":  "img/nissan.png",
+        "whatsapp":  "7504097744",
+        "vehicleTypes":  "nissan"
+    },
+    {
+        "id":  2,
+        "title":  "ڕەنجدەر",
+        "description":  "دەعامی ئازێرا ٢٠١٩/٢٠ و دەعامی کیا و کەڤەری گێڕی کیا ئۆپتیما ٢٠١٨-٢٠٢٠.",
+        "location":  "هەولێر",
+        "phones":  [
+                       "7503722454"
+                   ],
+        "workHours":  " ",
+        "image":  "img/nissan-toyota-kia.png",
+        "whatsapp":  "7503722454",
+        "vehicleTypes":  "kia, hyundai"
+    },
+    {
+        "id":  3,
+        "title":  "حاجی زوهێر / حاجی شاهێن",
+        "description":  "ئەگزۆز",
+        "location":  "هەولێر",
+        "phones":  [
+                       "7514847803",
+                       "7504615045"
+                   ],
+        "workHours":  " ",
+        "image":  "img/car-parts.png",
+        "whatsapp":  "7514847803",
+        "vehicleTypes":  "parts"
+    },
+    {
+        "id":  4,
+        "title":  "عەبدولباری / محەمەد سابیر",
+        "description":  "شۆفرلێتی گشتی",
+        "location":  "هەولێر",
+        "phones":  [
+                       "7504168405",
+                       "7514423623"
+                   ],
+        "workHours":  " ",
+        "image":  "img/chevrolet.png",
+        "whatsapp":  "7504168405",
+        "vehicleTypes":  "chevrolet"
+    },
+    {
+        "id":  5,
+        "title":  "فڕۆشگای موحسین",
+        "description":  "فرۆشتنی پارچەی پرۆتۆن، تۆیۆتا، نیسان، کیا و هیتر",
+        "location":  "هەولێر",
+        "phones":  [
+                       "7701964777",
+                       "7501518688"
+                   ],
+        "workHours":  " ",
+        "image":  "img/nissan-toyota-kia.png",
+        "whatsapp":  "7701964777",
+        "vehicleTypes":  "toyota, nissan, kia, proton"
+    },
+    {
+        "id":  6,
+        "title":  "گەراجی سیروان",
+        "description":  "پارچە و چاککردنەوەی مێرسیدس ئەکترۆس.",
+        "location":  "هەولێر",
+        "phones":  [
+                       "7704701010",
+                       "7502007979"
+                   ],
+        "workHours":  " ",
+        "image":  "img/nissan-toyota-kia.png",
+        "whatsapp":  "7704701010",
+        "vehicleTypes":  "mercedes, repair, garage"
+    },
+    {
+        "id":  7,
+        "title":  "فڕۆشگای کامیل",
+        "description":  "پارچەی ئۆتۆمبێلی یابانی (لاند کرۆزەر، نیسان پاترۆڵ، هایلۆکس، هتد).",
+        "location":  "هەولێر",
+        "phones":  [
+                       "7701560680",
+                       "7501116465"
+                   ],
+        "workHours":  " ",
+        "image":  "img/nissan-toyota.png",
+        "whatsapp":  "7701560680",
+        "vehicleTypes":  "toyota, nissan, japanese"
+    },
+    {
+        "id":  8,
+        "title":  "محەمەد فۆرد",
+        "description":  "پارچەی یەدەگی ئەسڵی بۆ هەموو جۆرە ئۆتۆمبێلێکی فۆرد.",
+        "location":  "هەولێر",
+        "phones":  [
+                       "7504466217"
+                   ],
+        "workHours":  " ",
+        "image":  "img/nissan-toyota-kia.png",
+        "whatsapp":  "7504466217",
+        "vehicleTypes":  "ford, all, parts"
+    },
+    {
+        "id":  9,
+        "title":  "ئەمەریکان سپۆرت",
+        "description":  "پارچەی یەدەگ و چاککردنەوەی هەموو جۆرە ئۆتۆمبێلێک.",
+        "location":  "هەولێر",
+        "phones":  [
+                       "7514490539",
+                       "7508481368"
+                   ],
+        "workHours":  " ",
+        "image":  "img/nissan-toyota-kia.png",
+        "whatsapp":  "7514490539",
+        "vehicleTypes":  "american, all, repair"
+    },
+    {
+        "id":  10,
+        "title":  "فڕۆشگای موحسین",
+        "description":  "فرۆشتنی پێداویستی ئۆتۆمبێل (نیسان، کیا، مازدا، تۆیۆتا، ئۆپڵ).",
+        "location":  "هەولێر",
+        "phones":  [
+                       "7510237273",
+                       "7501518688"
+                   ],
+        "workHours":  " ",
+        "image":  "img/nissan-toyota-kia.png",
+        "whatsapp":  "7510237273",
+        "vehicleTypes":  "toyota, nissan, kia, mazda, opel"
+    },
+    {
+        "id":  11,
+        "title":  "لانسر میراژ وۆڵد",
+        "description":  "پارچەی لانسر",
+        "location":  "هەولێر",
+        "phones":  [
+                       "7504488847"
+                   ],
+        "workHours":  " ",
+        "image":  "img/mitsubishy.png",
+        "whatsapp":  "7504488847",
+        "vehicleTypes":  "mitsubishi"
+    },
+    {
+        "id":  12,
+        "title":  "مصطفى القطيم (Mustafa Al-Qatim)",
+        "description":  "فرۆشتنی پارچەی تۆیۆتا بە کۆ",
+        "location":  "بەغداد",
+        "phones":  [
+                       "7734651344",
+                       "7810336981"
+                   ],
+        "workHours":  " ",
+        "image":  "img/toyota.png",
+        "whatsapp":  "7734651344",
+        "vehicleTypes":  "toyota"
+    },
+    {
+        "id":  13,
+        "title":  "معرض الزهراء",
+        "description":  "بازرگانی ئۆتۆمبێلی مۆدێرن، پارچەی یەدەگ و کەلوپەلی ئۆتۆمبێلی گەورە وەک ئەکترۆس و سکانیا.",
+        "location":  "بەغداد",
+        "phones":  [
+                       "7505332960",
+                       "7826304669"
+                   ],
+        "workHours":  " ",
+        "image":  "img/nissan-toyota-kia.png",
+        "whatsapp":  "7505332960",
+        "vehicleTypes":  "mercedes, scania, parts"
+    },
+    {
+        "id":  14,
+        "title":  "خدمات الساعدي",
+        "description":  "جیپ، کرایسلەر، شۆفرلێت",
+        "location":  "بەغداد",
+        "phones":  [
+                       "7824582101",
+                       "7705854245"
+                   ],
+        "workHours":  " ",
+        "image":  "img/nissan-toyota-kia.png",
+        "whatsapp":  "7824582101",
+        "vehicleTypes":  "chevrolet, jeep, chrysler"
+    },
+    {
+        "id":  15,
+        "title":  "حسن زيبارى / جیهان ميديا",
+        "description":  "جیپ، فۆرد، کرایسلەر، دۆج، شۆفرلێت و ئۆتۆمبێلی یابانی (نیسان)",
+        "location":  "بەغداد",
+        "phones":  [
+                       "7504585003",
+                       "7508563199"
+                   ],
+        "workHours":  " ",
+        "image":  "img/nissan-toyota-kia.png",
+        "whatsapp":  "7504585003",
+        "vehicleTypes":  "nissan, ford, chevrolet, jeep, dodge, chrysler, japanese"
+    },
+    {
+        "id":  16,
+        "title":  "بيت الشوفر",
+        "description":  "شۆفرلێت",
+        "location":  "بەغداد",
+        "phones":  [
+                       "7709754000",
+                       "7519431850"
+                   ],
+        "workHours":  " ",
+        "image":  "img/chevrolet.png",
+        "whatsapp":  "7709754000",
+        "vehicleTypes":  "chevrolet"
+    },
+    {
+        "id":  17,
+        "title":  "زانیاری ئوتومبیل",
+        "description":  "پەیجی سۆشیاڵ میدیا",
+        "location":  "ئۆنلاین",
+        "phones":  [
+
+                   ],
+        "workHours":  " ",
+        "image":  "img/car-parts.png",
+        "whatsapp":  " ",
+        "vehicleTypes":  " "
+    },
+    {
+        "id":  18,
+        "title":  "جيهان التيما",
+        "description":  "ئالتیما",
+        "location":  "ئۆنلاین",
+        "phones":  [
+                       "7708692676",
+                       "7725430115"
+                   ],
+        "workHours":  " ",
+        "image":  "img/nissan.png",
+        "whatsapp":  "7708692676",
+        "vehicleTypes":  "nissan"
+    },
+    {
+        "id":  19,
+        "title":  "طه نیسان",
+        "description":  "پارچەی یەدەگی نیسان",
+        "location":  "Baghdad",
+        "phones":  [
+                       "7718170460"
+                   ],
+        "workHours":  " ",
+        "image":  "img/nissan-toyota-kia.png",
+        "whatsapp":  "7718170460",
+        "vehicleTypes":  "nissan, parts"
+    },
+    {
+        "id":  20,
+        "title":  "Cars.Doctor Service",
+        "description":  " ",
+        "location":  "Online",
+        "phones":  [
+                       "7505188000"
+                   ],
+        "workHours":  " ",
+        "image":  "img/car-parts.png",
+        "whatsapp":  "7505188000",
+        "vehicleTypes":  "repair"
+    },
+    {
+        "id":  21,
+        "title":  "M S C",
+        "description":  "چینی ئەمریکی کۆری",
+        "location":  "Online",
+        "phones":  [
+
+                   ],
+        "workHours":  " ",
+        "image":  "img/nissan-toyota-kia.png",
+        "whatsapp":  " ",
+        "vehicleTypes":  "korean, american, chinese"
+    },
+    {
+        "id":  22,
+        "title":  "ئالان",
+        "description":  "پارچەی یەدەگی ئەمەریکی\nMOPAR, Ford, Chevrolet",
+        "location":  "هەولێر",
+        "phones":  [
+                       "7504548493"
+                   ],
+        "workHours":  " ",
+        "image":  "img/nissan-toyota-kia.png",
+        "whatsapp":  "7504548493",
+        "vehicleTypes":  "ford, chevrolet, mopar, american, parts"
+    },
+    {
+        "id":  23,
+        "title":  "وەستا ئامانج",
+        "description":  " ",
+        "location":  "هەولێر",
+        "phones":  [
+                       "7504496205"
+                   ],
+        "workHours":  " ",
+        "image":  "img/car-parts.png",
+        "whatsapp":  "7504496205",
+        "vehicleTypes":  "repair"
+    },
+    {
+        "id":  24,
+        "title":  "محمد أوتۆ",
+        "description":  "بۆ بازرگانی پارچەی یەدەگی سەیارە، پارچەی ئەسڵی\nMINI, BMW",
+        "location":  "هەولێر",
+        "phones":  [
+                       "7501891984",
+                       "7504801984"
+                   ],
+        "workHours":  " ",
+        "image":  "img/nissan-toyota-kia.png",
+        "whatsapp":  "7501891984",
+        "vehicleTypes":  "bmw, mini, parts"
+    },
+    {
+        "id":  25,
+        "title":  "دەستکردی وەستا فلاح",
+        "description":  " ",
+        "location":  "هەولێر",
+        "phones":  [
+                       "7504048689",
+                       "7504498689",
+                       "7504049474"
+                   ],
+        "workHours":  " ",
+        "image":  "img/car-parts.png",
+        "whatsapp":  "7504048689",
+        "vehicleTypes":  "repair"
+    },
+    {
+        "id":  26,
+        "title":  "سامان زەنگەنە",
+        "description":  "BMW",
+        "location":  "هەولێر",
+        "phones":  [
+                       "7504467525"
+                   ],
+        "workHours":  " ",
+        "image":  "img/bmw.png",
+        "whatsapp":  "7504467525",
+        "vehicleTypes":  "bmw"
+    },
+    {
+        "id":  27,
+        "title":  "شوێنی عیسا جامچی",
+        "description":  "بۆ گۆرینی هەموو جۆرە جامێک و  چاکردنی سلایت و قفل مرکزی و قایشی خۆبەستان",
+        "location":  "هەولێر",
+        "phones":  [
+                       "7514510060",
+                       "7507990060",
+                       "7507440060"
+                   ],
+        "workHours":  " ",
+        "image":  "img/nissan-toyota-kia.png",
+        "whatsapp":  "7514510060",
+        "vehicleTypes":  "all, parts, repair"
+    },
+    {
+        "id":  28,
+        "title":  "جیهانی صيني",
+        "description":  "(BYD):\n بي واي دي اف ٣+ جي ٣، بي واي دي اف ٦، بي واي دي اف زیرو     \n\n(Lifan):\n٢٠١٢ لیفان ٦٢٠، لیفان ٥٢٠، لیفان ٣٢٠، لیفان اکس ٦٠،     لیفان باص اف اس\n،لیفان باص اكس اف ٢٠١٤،\n (Geely):\nجيلي سي كي،  جيلي ام كي، جيلي  باندا، جيلي مابل، جيلي اي سي ٧، جيلي اي سي ٨،\n جيلي اي اكس ٧، جيلي نيو مابل ٢٠١٤، جيلي نيو ام كي ٢٠١٤ \n(chery):\nشيري كوين، شيري كيو كيو، شيري اي ٥، شيري اي ٣، شيري اي ١،  شيري  نیو کوین، \n  شيري تیکۆ ٢٠١١، شيري تیکۆ ٢٠١٣،  شيري  ایستر ٢٠١١، شيري  ایستر ٢٠١٤،  \n شيريe5، شيري بيك ابQ22، شيريQQ6، شيري كيو كيو مي، شيري فلون\n(Greatwall):\nکریت وول فلورید\n     (Faw):\nفاو اولي،  فاو بي ٥٠ \n(MG)، (Mg 550)،(Mg 350)،(Mg 3)،(Changan)،(CS35)،(Eado)",
+        "location":  "هەولێر",
+        "phones":  [
+                       "7508411913",
+                       "7503619139"
+                   ],
+        "workHours":  " ",
+        "image":  "img/nissan-toyota-kia.png",
+        "whatsapp":  "7503707416",
+        "vehicleTypes":  "byd, lifan, geely, chery, great_wall, faw, mg, changan, chinese"
+    },
+    {
+        "id":  29,
+        "title":  "شوێنی عبداللە",
+        "description":  "بۆ فرۆشتنی کەل و پەلی تویوتا\n (تەکسی کوردستان ، کرۆلا، بیکاشۆ)",
+        "location":  "هەولێر- پیشەسازی باکوور-فرعی حریق-نزیک مطعم شەقلاوە",
+        "phones":  [
+                       "7514040665",
+                       "7829434500"
+                   ],
+        "workHours":  " ",
+        "image":  "img/nissan-toyota-kia.png",
+        "whatsapp":  "7514040665",
+        "vehicleTypes":  "toyota, parts"
+    },
+    {
+        "id":  30,
+        "title":  "محمد فۆرد",
+        "description":  "بگ لایت F150\n 2010-2014",
+        "location":  "هەولێر",
+        "phones":  [
+
+                   ],
+        "workHours":  " ",
+        "image":  "img/nissan-toyota-kia.png",
+        "whatsapp":  " ",
+        "vehicleTypes":  "ford, parts"
+    },
+    {
+        "id":  31,
+        "title":  "شوێنی زانا",
+        "description":  "بۆ دابینکردنی هەموو پارچە یەدەگەکانی فۆرد بە تاک و بە کۆ\nفورد عام:\r\nيدج- اكسبلورا - توروس - بيوژن - فوکس - ڤیگو - اکسبریشن -( F-150)",
+        "location":  "هەولێر/ پیشەسازی باکوور- بەرامبەر میکائیک امین",
+        "phones":  [
+                       "7504477400"
+                   ],
+        "workHours":  " ",
+        "image":  "img/nissan-toyota-kia.png",
+        "whatsapp":  "7504477400",
+        "vehicleTypes":  "ford, parts"
+    },
+    {
+        "id":  32,
+        "title":  "کۆمپانیای ئەل ئولا\n بریکاری نوێی ئوتومبێلی هایوندای لە عێراق",
+        "description":  "خزمەتگوزاری گۆڕینی زەیت و فلتەر و پشکنینی ئوتومبێل",
+        "location":  "هەولێر/ ڕێگای بەحرکەی کۆن - بەرامبەر کەباب یاسین",
+        "phones":  [
+                       "7506107000",
+                       "7506109000"
+                   ],
+        "workHours":  " ",
+        "image":  "img/nissan-toyota-kia.png",
+        "whatsapp":  "7506107000",
+        "vehicleTypes":  "hyundai, parts, repair"
+    },
+    {
+        "id":  33,
+        "title":  "هێمن",
+        "description":  "بۆ فرۆشتنی کەل و پەلی نیسان\nرۆگ - ئالتیما - لاکشمیبای - سنترا - کیکس",
+        "location":  "هەولێر ، پیشەسازی باشوور - نزیک مزگەوتی یەکی شوبات",
+        "phones":  [
+                       "7502005775"
+                   ],
+        "workHours":  " ",
+        "image":  "img/nissan-toyota-kia.png",
+        "whatsapp":  "7502005775",
+        "vehicleTypes":  "nissan, parts"
+    },
+    {
+        "id":  34,
+        "title":  "شوێنی ئەحمەد و ئومێد",
+        "description":  "بۆ فرۆشتنی یەدەگی نوێی ئۆتومبێل\nتۆیۆتا، Mitsubishi motors ، نیسان، هیۆندای، شۆفرلێت ، BMW،  volkswagen، Mercedes-Benz",
+        "location":  "هەولیر/ پیشەسازی باشوور - کۆڵانی سیێیەم",
+        "phones":  [
+                       "7517719349",
+                       "7502021183"
+                   ],
+        "workHours":  " ",
+        "image":  "img/nissan-toyota.png",
+        "whatsapp":  "7517719349",
+        "vehicleTypes":  "toyota, nissan, hyundai, chevrolet, mercedes, mitsubishi, volkswagen, parts"
+    },
+    {
+        "id":  35,
+        "title":  "شێخ هەوار",
+        "description":  " ",
+        "location":  "هەولێر",
+        "phones":  [
+
+                   ],
+        "workHours":  " ",
+        "image":  "img/car-parts.png",
+        "whatsapp":  " ",
+        "vehicleTypes":  " "
+    },
+    {
+        "id":  36,
+        "title":  "جیهانی فلتەر\n عومەر عادل",
+        "description":  "بۆ فرۆشتنی هەموو جۆرە فلتەر و ڕۆنێک بە کۆ",
+        "location":  "هەولێر",
+        "phones":  [
+                       "7511606073"
+                   ],
+        "workHours":  " ",
+        "image":  "img/nissan-toyota-kia.png",
+        "whatsapp":  "7511606073",
+        "vehicleTypes":  "all, parts"
+    },
+    {
+        "id":  37,
+        "title":  "کۆمپانیای طيبه",
+        "description":  "بۆ فرۆشتنی پارچەی یەدەگی سەیارەی کۆری\nهندای - کیا",
+        "location":  "هەولێر/ پیشەسازی باکوور - ڕێگای شەقڵاوە",
+        "phones":  [
+                       "7503707416",
+                       "7513239768",
+                       "7508718078",
+                       "7702006949",
+                       "7508844436",
+                       "7738432442",
+                       "7501496845",
+                       "7507734602"
+                   ],
+        "workHours":  " ",
+        "image":  "img/nissan-toyota-kia.png",
+        "whatsapp":  "7503707416",
+        "vehicleTypes":  "kia, hyundai, korean, parts"
+    },
+    {
+        "id":  38,
+        "title":  "محبي لانسر بومه",
+        "description":  "بۆ بازرگانی پارچەی یەدەگی سەیارە\n\"طقم صاج ابواب و رفرفين شامبين ب ۳۳۰۰ ج، طقم صاج فضي ابواب ورفرفين ب ٢٥٠٠ ج، طقم ابوابنبيتي كامل دركسيون شمال ب ۳۰۰۰ ج،\n اي طقم ابواب دركسيون شمال ب ۳۰۰۰ ج، كبوت كحلي ب ۲۰۰۰ ج، كبوت فضي ب ۱۷۰۰ ج، شنطه كحلي ب ٦٠٠ج، \nشنطه فضي ب ٥٠٠ ج، شنطه نبيتي ب ۷۰۰ ج، شنطه نبيتي باسبويلر ب ١٥٠٠ ج، طقم فوانيس امامي ب ۱۳۰۰ج، \nطقم فوانيس خلفي ب ۱۰۰۰ ج، طقم رفرف اسود ب ۱۰۰۰ ج، طقم رفرف كحلي ب ۱۳۰۰ج، اي رفرف ب ٦٠٠ج\n، اكصدام خلفي فضي تيواني استيراد ب ۷۰۰ج، اكصدام خلفي استيراد ب ۹۰۰ ج، طاره ثلاثيه ب ٨٥٠ج، طاره مالتي ب ٧٥٠ج بشريط الايرباج،\n طابلوه بيج ب ٣٥٠٠،\n طقم مريات ضم ب ٨٥٠ج، شفره ومريات وايتاك وماوس طقم مريات كهرباء دركسيون شمال ب ٦٠٠ج\"",
+        "location":  "هەولێر",
+        "phones":  [
+
+                   ],
+        "workHours":  " ",
+        "image":  "img/nissan-toyota-kia.png",
+        "whatsapp":  " ",
+        "vehicleTypes":  "mitsubishi, parts"
+    },
+    {
+        "id":  39,
+        "title":  "جیهانی کهرەبیات\n علی",
+        "description":  "بۆ چاککردنەوەی هەموو جۆرە لایتێک",
+        "location":  "صناعەی جنوبی کۆڵانی یەکەم پشت محل ئارد",
+        "phones":  [
+                       "7508170876"
+                   ],
+        "workHours":  " ",
+        "image":  "img/nissan-toyota-kia.png",
+        "whatsapp":  "7508170876",
+        "vehicleTypes":  "all, parts, repair"
+    },
+    {
+        "id":  40,
+        "title":  "حجی صلاح بایع",
+        "description":  "بۆ فرۆشتنی پارچەی یەدەگی تۆیۆتا",
+        "location":  "هەولێر- ڕێگای مەخمور- پشت کارگەی ئارد",
+        "phones":  [
+                       "7504613580",
+                       "7507250445"
+                   ],
+        "workHours":  " ",
+        "image":  "img/nissan-toyota-kia.png",
+        "whatsapp":  "7504613580",
+        "vehicleTypes":  "toyota, parts"
+    },
+    {
+        "id":  41,
+        "title":  "شوێنی محمد",
+        "description":  "بۆ فرۆشتنی کەل و پەلی سازۆکی و دایهاسو",
+        "location":  "هەولێر",
+        "phones":  [
+                       "7504486924"
+                   ],
+        "workHours":  " ",
+        "image":  "img/nissan-toyota-kia.png",
+        "whatsapp":  "7504486924",
+        "vehicleTypes":  "suzuki, daihatsu, parts"
+    },
+    {
+        "id":  42,
+        "title":  "مستەفا فەتحی",
+        "description":  " ",
+        "location":  "هەولێر",
+        "phones":  [
+                       "7502465349"
+                   ],
+        "workHours":  " ",
+        "image":  "img/car-parts.png",
+        "whatsapp":  "7502465349",
+        "vehicleTypes":  " "
+    },
+    {
+        "id":  43,
+        "title":  "شوێنی نیسان",
+        "description":  "بۆ فرۆشتنی پارچەی یەدەگی تۆیۆتا",
+        "location":  "هەولێر- پیشەسازی باکوور- بەرامبەر متعم شەقلاوە",
+        "phones":  [
+                       "7502681990",
+                       "7831279676",
+                       "7504542094"
+                   ],
+        "workHours":  " ",
+        "image":  "img/nissan-toyota.png",
+        "whatsapp":  "7502681990",
+        "vehicleTypes":  "toyota, nissan, parts"
+    },
+    {
+        "id":  44,
+        "title":  "کۆمپانیای پارس",
+        "description":  "بۆ فرۆشتنی کەل و پەلی سازۆکی و دایهاسو",
+        "location":  "هەولێر",
+        "phones":  [
+
+                   ],
+        "workHours":  " ",
+        "image":  "img/nissan-toyota-kia.png",
+        "whatsapp":  " ",
+        "vehicleTypes":  "suzuki, daihatsu, parts"
+    },
+    {
+        "id":  45,
+        "title":  "شوێنی نەعمان گوێڕی",
+        "description":  "پارچەی یەدەگی ئەسڵی بۆ هەموو جۆرەکانی سەیارەی فۆرد\n اكسبلورر - ايدج - أكسبيديشن - 150-F - رابتور - اسكايب - فوكس - فيكو - رنجر - ايكوسبورت - فيوژن",
+        "location":  "هەولێر",
+        "phones":  [
+
+                   ],
+        "workHours":  " ",
+        "image":  "img/nissan-toyota-kia.png",
+        "whatsapp":  " ",
+        "vehicleTypes":  "ford, all, parts"
+    },
+    {
+        "id":  46,
+        "title":  "سەردەم حەسیب",
+        "description":  " ",
+        "location":  "هەولێر",
+        "phones":  [
+                       "7501641062",
+                       "7504011305",
+                       "7504474035"
+                   ],
+        "workHours":  " ",
+        "image":  "img/car-parts.png",
+        "whatsapp":  "7501641062",
+        "vehicleTypes":  " "
+    },
+    {
+        "id":  47,
+        "title":  "سيؤول",
+        "description":  "بۆ فرۆشتنی پارچەی یەدەگی سەیارە",
+        "location":  "هەولێر",
+        "phones":  [
+                       "7701630127",
+                       "7504122152"
+                   ],
+        "workHours":  " ",
+        "image":  "img/car-parts.png",
+        "whatsapp":  "7701630127",
+        "vehicleTypes":  "parts"
+    },
+    {
+        "id":  48,
+        "title":  "دەزگای ئەلکترۆنی محمد",
+        "description":  "بۆ فرۆشتن ە چاککردنەوەی هەموو جۆرە مسجلێکی ئۆتۆمبێل",
+        "location":  "هەولێر",
+        "phones":  [
+                       "7504200664"
+                   ],
+        "workHours":  " ",
+        "image":  "img/nissan-toyota-kia.png",
+        "whatsapp":  "7504200664",
+        "vehicleTypes":  "all, repair"
+    },
+    {
+        "id":  49,
+        "title":  "شوێنی هونەر ساڵەیی",
+        "description":  "بۆ فرۆشتن و کڕینی هەموو جۆرە تایە و ویڵێک",
+        "location":  "هەولێر- پیسەسازی باشوور- ڕێگای مەخمور- نزیک غسل ئاری",
+        "phones":  [
+                       "7504288337",
+                       "7504155578"
+                   ],
+        "workHours":  " ",
+        "image":  "img/nissan-toyota-kia.png",
+        "whatsapp":  "7504288337",
+        "vehicleTypes":  "all, parts"
+    },
+    {
+        "id":  50,
+        "title":  "سکرابی بەسام",
+        "description":  "بۆ فرۆشتنی پارچەی کۆن و نوێ\n کرۆلا - کامری - ئەڤەلۆن",
+        "location":  "سلێمانی",
+        "phones":  [
+                       "7701993151"
+                   ],
+        "workHours":  " ",
+        "image":  "img/nissan-toyota-kia.png",
+        "whatsapp":  "7701993151",
+        "vehicleTypes":  "toyota, scrap"
+    },
+    {
+        "id":  51,
+        "title":  "الشايع",
+        "description":  "بازرگانی پارچەی یەدەگی سەیارەی یابانی",
+        "location":  "بەغداد-الطالبية\nقرب مطعم حبايبنا",
+        "phones":  [
+                       "7707265448"
+                   ],
+        "workHours":  " ",
+        "image":  "img/nissan-toyota-kia.png",
+        "whatsapp":  "7707265448",
+        "vehicleTypes":  "japanese, parts"
+    },
+    {
+        "id":  52,
+        "title":  "شوێنی پشتیوان",
+        "description":  " ",
+        "location":  "‌هەولێر",
+        "phones":  [
+
+                   ],
+        "workHours":  " ",
+        "image":  "img/car-parts.png",
+        "whatsapp":  " ",
+        "vehicleTypes":  " "
+    },
+    {
+        "id":  53,
+        "title":  "فرۆشگای شێخ ‌حسین",
+        "description":  "بۆ فرۆشتنی هەموو پارچەیەکی یەدەگی نیسان پاترۆل ، پیکاب/ تۆیۆتا، وەنەوشە",
+        "location":  "سلێمانی/ ناوچەی پیشەسازی ، فەرعی دووەم، بەرامبەر مزگەوتەکە",
+        "phones":  [
+                       "7702100697"
+                   ],
+        "workHours":  " ",
+        "image":  "img/nissan-toyota.png",
+        "whatsapp":  "7702100697",
+        "vehicleTypes":  "toyota, nissan, jeep, parts"
+    },
+    {
+        "id":  54,
+        "title":  "وەستا چالاک",
+        "description":  "وەستای فیتپەمپی گەڕۆک\nبۆ گۆڕینی هەمو جۆرە فیتپەمپێکی سەیارە",
+        "location":  "......",
+        "phones":  [
+                       "7701358433"
+                   ],
+        "workHours":  " ",
+        "image":  "img/nissan-toyota-kia.png",
+        "whatsapp":  "7701358433",
+        "vehicleTypes":  "parts, repair"
+    },
+    {
+        "id":  55,
+        "title":  "فرۆشگای نەوزاد ڕۆستەم",
+        "description":  "فرۆشتن و هاوردەکردنی پارچەی یەدەگی ئۆتۆمبێل لە صین- تایوان- تایلاند بە کۆ",
+        "location":  "شەقامی سەرەکی فلکەی نالی - نزیک مطعم شارۆ",
+        "phones":  [
+                       "7728607221",
+                       "7701529114",
+                       "7501529114"
+                   ],
+        "workHours":  " ",
+        "image":  "img/car-parts.png",
+        "whatsapp":  "7728607221",
+        "vehicleTypes":  "parts"
+    },
+    {
+        "id":  56,
+        "title":  "نوسینگەی ساماڵ حمە امین محمد",
+        "description":  "بۆ کڕین و فرۆشتنی خانوو، زەوی، دۆنم",
+        "location":  "سلێمانی/ کانی گۆمە - گەڕەکی سایە",
+        "phones":  [
+                       "7701903941",
+                       "7501111823"
+                   ],
+        "workHours":  " ",
+        "image":  "img/car-parts.png",
+        "whatsapp":  "7701903941",
+        "vehicleTypes":  " "
+    },
+    {
+        "id":  57,
+        "title":  "بۆ تۆیۆتا",
+        "description":  "فیول پەمپ بۆ تۆیۆتا",
+        "location":  "......",
+        "phones":  [
+
+                   ],
+        "workHours":  " ",
+        "image":  "img/toyota.png",
+        "whatsapp":  " ",
+        "vehicleTypes":  "toyota"
+    },
+    {
+        "id":  58,
+        "title":  "سکرابی ئازاد",
+        "description":  "نیسان، تۆیۆتا",
+        "location":  "......",
+        "phones":  [
+                       "7701524150",
+                       "7501421562"
+                   ],
+        "workHours":  " ",
+        "image":  "img/nissan-toyota.png",
+        "whatsapp":  "7701524150",
+        "vehicleTypes":  "toyota, nissan, scrap"
+    },
+    {
+        "id":  59,
+        "title":  "سکرابچی\nشیروان کۆیی",
+        "description":  "ئۆپڵ، سەنی",
+        "location":  "......",
+        "phones":  [
+                       "7501396749"
+                   ],
+        "workHours":  " ",
+        "image":  "img/nissan-toyota-kia.png",
+        "whatsapp":  "7501396749",
+        "vehicleTypes":  "nissan, opel, scrap"
+    },
+    {
+        "id":  60,
+        "title":  "حاجی علاءالدين",
+        "description":  "بۆ فرۆشتنی ئەشیای شۆفرلێت - ئۆپترا - اپیکا - کروز - مالیبو - ئاڤیۆ",
+        "location":  "بغداد/ الطالبية - مقابل مطعم حبایبنا",
+        "phones":  [
+                       "7718042457"
+                   ],
+        "workHours":  " ",
+        "image":  "img/nissan-toyota-kia.png",
+        "whatsapp":  "7718042457",
+        "vehicleTypes":  "chevrolet, parts"
+    },
+    {
+        "id":  61,
+        "title":  "ابراهيم",
+        "description":  "هیوندا - النترا - اکسنت - سوناتا - توسان - سانتافی",
+        "location":  "بغداد/ الطالبية - مقابل مطعم حبایبنا",
+        "phones":  [
+                       "7703978508"
+                   ],
+        "workHours":  " ",
+        "image":  "img/hyundai.png",
+        "whatsapp":  "7703978508",
+        "vehicleTypes":  "hyundai"
+    },
+    {
+        "id":  62,
+        "title":  "ابو منتظر",
+        "description":  "هیوندا - کیا",
+        "location":  "بغداد/ الطالبية - مقابل مطعم حبایبنا",
+        "phones":  [
+                       "7715694247"
+                   ],
+        "workHours":  " ",
+        "image":  "img/kia.png",
+        "whatsapp":  "7715694247",
+        "vehicleTypes":  "kia"
+    },
+    {
+        "id":  63,
+        "title":  "حسن",
+        "description":  "واردات امریکا - نیسان - تویوتا",
+        "location":  "بغداد/ الطالبية - مقابل مطعم حبایبنا",
+        "phones":  [
+                       "7704257850"
+                   ],
+        "workHours":  " ",
+        "image":  "img/nissan-toyota.png",
+        "whatsapp":  "7704257850",
+        "vehicleTypes":  "toyota, nissan"
+    },
+    {
+        "id":  64,
+        "title":  "حیدر",
+        "description":  "بۆ فرۆشتنی ئەشیای کیا:\nسیراتو - اوبتیما - سورینتو - سبورتاج - سول - کادینزا - موهافی",
+        "location":  "بغداد/ الطالبية - مقابل مطعم حبایبنا",
+        "phones":  [
+                       "7721111977"
+                   ],
+        "workHours":  " ",
+        "image":  "img/nissan-toyota-kia.png",
+        "whatsapp":  "7721111977",
+        "vehicleTypes":  "kia, parts"
+    },
+    {
+        "id":  65,
+        "title":  "رعد",
+        "description":  "تۆیۆتا - لاندکرۆز - پیکاب - کرۆلا",
+        "location":  "بغداد/ الطالبية - مقابل مطعم حبایبنا",
+        "phones":  [
+                       "7703991870"
+                   ],
+        "workHours":  " ",
+        "image":  "img/nissan-toyota.png",
+        "whatsapp":  "7703991870",
+        "vehicleTypes":  "toyota, nissan"
+    },
+    {
+        "id":  66,
+        "title":  "سيف",
+        "description":  "شۆفرلێت - دۆج - کرایسلەر",
+        "location":  "بغداد/ الطالبية - مقابل مطعم حبایبنا",
+        "phones":  [
+                       "7716075191"
+                   ],
+        "workHours":  " ",
+        "image":  "img/nissan-toyota-kia.png",
+        "whatsapp":  "7716075191",
+        "vehicleTypes":  "chevrolet, dodge, chrysler"
+    },
+    {
+        "id":  67,
+        "title":  "عقيل",
+        "description":  "کیا - هیوندا",
+        "location":  "بغداد/ الطالبية - مقابل مطعم حبایبنا",
+        "phones":  [
+                       "7700201201"
+                   ],
+        "workHours":  " ",
+        "image":  "img/kia.png",
+        "whatsapp":  "7700201201",
+        "vehicleTypes":  "kia"
+    },
+    {
+        "id":  68,
+        "title":  "علي",
+        "description":  "کیا - هیوندا",
+        "location":  "بغداد/ الطالبية - مقابل مطعم حبایبنا",
+        "phones":  [
+                       "7712396956"
+                   ],
+        "workHours":  " ",
+        "image":  "img/kia.png",
+        "whatsapp":  "7712396956",
+        "vehicleTypes":  "kia"
+    },
+    {
+        "id":  69,
+        "title":  "علي مكي",
+        "description":  "جگە لە نیسان",
+        "location":  "بغداد/ الطالبية - مقابل مطعم حبایبنا",
+        "phones":  [
+                       "7704297805"
+                   ],
+        "workHours":  " ",
+        "image":  "img/nissan.png",
+        "whatsapp":  "7704297805",
+        "vehicleTypes":  "nissan"
+    },
+    {
+        "id":  70,
+        "title":  "محمد",
+        "description":  "تویوتا - کرولا - كامري - يارس",
+        "location":  "بغداد/ الطالبية - مقابل مطعم حبایبنا",
+        "phones":  [
+                       "7703957279"
+                   ],
+        "workHours":  " ",
+        "image":  "img/toyota.png",
+        "whatsapp":  "7703957279",
+        "vehicleTypes":  "toyota"
+    },
+    {
+        "id":  71,
+        "title":  "مروان",
+        "description":  "مازدا - ميتسوبيشي",
+        "location":  "بغداد/ الطالبية - مقابل مطعم حبایبنا",
+        "phones":  [
+                       "7707955502"
+                   ],
+        "workHours":  " ",
+        "image":  "img/nissan-toyota-kia.png",
+        "whatsapp":  "7707955502",
+        "vehicleTypes":  "mitsubishi, mazda"
+    },
+    {
+        "id":  72,
+        "title":  "مهيمن",
+        "description":  "شۆفرلێت - دۆج - کرایسلەر",
+        "location":  "بغداد/ الطالبية - مقابل مطعم حبایبنا",
+        "phones":  [
+                       "7702581636"
+                   ],
+        "workHours":  " ",
+        "image":  "img/nissan-toyota-kia.png",
+        "whatsapp":  "7702581636",
+        "vehicleTypes":  "chevrolet, dodge, chrysler"
+    },
+    {
+        "id":  73,
+        "title":  "عەبدوڵڵا - بڕوا",
+        "description":  "هیوندا - کیا",
+        "location":  "سلێمانی/ ناوچەی پیشەسازی یەک - تەنیشت ‌حەریقە کۆنەکە",
+        "phones":  [
+                       "7501047449",
+                       "7725322167"
+                   ],
+        "workHours":  " ",
+        "image":  "img/kia.png",
+        "whatsapp":  "7501047449",
+        "vehicleTypes":  "kia"
+    },
+    {
+        "id":  74,
+        "title":  "احمد السهل",
+        "description":  "بۆ فرۆشتنی پارچەی یەدەگی سەیارەی یابانی کۆن و نوێ\nباجیرو - لانسر - ناتفیا - اوت لندر - اندي فور - بروتون - کلنت - بیک اب - قرش - کلبس",
+        "location":  "بغداد/ الطالبية - مقابل مطعم حبایبنا",
+        "phones":  [
+                       "7712727937"
+                   ],
+        "workHours":  " ",
+        "image":  "img/nissan-toyota-kia.png",
+        "whatsapp":  "7712727937",
+        "vehicleTypes":  "mitsubishi, proton, japanese, parts"
+    },
+    {
+        "id":  75,
+        "title":  "کۆمپیوتەری ئاودێر",
+        "description":  ".....",
+        "location":  "......",
+        "phones":  [
+
+                   ],
+        "workHours":  " ",
+        "image":  "img/car-parts.png",
+        "whatsapp":  " ",
+        "vehicleTypes":  " "
+    },
+    {
+        "id":  76,
+        "title":  "فرۆشگای سێ برا",
+        "description":  "کرۆلا - صەنی - صەنی کۆری",
+        "location":  "سلێمانی/ ناوچەی پیشەسازی- فەرعی دووەم - لای مزگەوتە",
+        "phones":  [
+                       "7708698804"
+                   ],
+        "workHours":  " ",
+        "image":  "img/nissan-toyota.png",
+        "whatsapp":  "7708698804",
+        "vehicleTypes":  "toyota, nissan, korean"
+    },
+    {
+        "id":  77,
+        "title":  "جیهانی ڤۆڵکسواگن\nزەردەشت شێخ فاتیح",
+        "description":  "بۆ فرۆشتنی پارچەی یەدەگی کۆن و تازە\nئاودی - پاسات - جیتا - گۆڵف - سکۆدا",
+        "location":  "سلێمانی/ ناوچەی پیشەسازی یەک - فەرعی دووەم - بەرامبەر عەتای بایع",
+        "phones":  [
+                       "7501580089",
+                       "7731580090"
+                   ],
+        "workHours":  " ",
+        "image":  "img/nissan-toyota-kia.png",
+        "whatsapp":  "7501580089",
+        "vehicleTypes":  "volkswagen, audi, skoda, parts"
+    },
+    {
+        "id":  78,
+        "title":  "شوێنی عزالدین",
+        "description":  ".....",
+        "location":  "ڕێگای سەرەکی هەولێر-کەرکووک",
+        "phones":  [
+                       "7507802802"
+                   ],
+        "workHours":  " ",
+        "image":  "img/car-parts.png",
+        "whatsapp":  "7507802802",
+        "vehicleTypes":  " "
+    },
+    {
+        "id":  79,
+        "title":  "مەعرەزی ئاڵا",
+        "description":  "کڕین و فرۆشتنی هەموو جۆرە ئۆتۆمبێلێک",
+        "location":  "سلێمانی - خوار پردی تاسڵوجە - لاکۆڵانی خوار مەتعەمی تەبا",
+        "phones":  [
+                       "7701460606",
+                       "7501460606"
+                   ],
+        "workHours":  " ",
+        "image":  "img/car-parts.png",
+        "whatsapp":  "7701460606",
+        "vehicleTypes":  "all"
+    },
+    {
+        "id":  80,
+        "title":  "پیشانگای ئۆتۆمبێلی باخی میر",
+        "description":  "بۆ کڕین و فرۆشتنی هەموو جۆرە ئۆتۆمبێلێک",
+        "location":  "سلێمانی/ تاسڵوجە - خوار پردی تاسڵوجە",
+        "phones":  [
+                       "7701542475",
+                       "7501542475"
+                   ],
+        "workHours":  " ",
+        "image":  "img/car-parts.png",
+        "whatsapp":  "7701542475",
+        "vehicleTypes":  "all"
+    },
+    {
+        "id":  81,
+        "title":  "پیشانگای ئۆتۆمبێلی دیلمان",
+        "description":  "بۆ کڕین و فرۆشتنی هەموو جۆرە ئۆتۆمبێلێک",
+        "location":  "سلێمانی/ تاسڵوجە - خوار پردی تاسڵوجە",
+        "phones":  [
+                       "7701544299",
+                       "7701588626",
+                       "7501588626"
+                   ],
+        "workHours":  " ",
+        "image":  "img/car-parts.png",
+        "whatsapp":  "7701544299",
+        "vehicleTypes":  "all"
+    },
+    {
+        "id":  82,
+        "title":  "پیشانگای باوکی دوارۆژ",
+        "description":  "بۆ کڕین و فرۆشتنی هەموو جۆرە ئۆتۆمبێلێک",
+        "location":  "سلێمانی/ تاسڵوجە - خوار پردی تاسڵوجە",
+        "phones":  [
+                       "7702206622",
+                       "7702111162"
+                   ],
+        "workHours":  " ",
+        "image":  "img/car-parts.png",
+        "whatsapp":  "7702206622",
+        "vehicleTypes":  "all"
+    },
+    {
+        "id":  83,
+        "title":  "مەعرەزی ئاڵتونی",
+        "description":  "بۆ کڕین و فرۆشتنی هەموو جۆرە ئۆتۆمبێلێک",
+        "location":  "سلێمانی/ تاسڵوجە - خوار پردی تاسڵوجە",
+        "phones":  [
+                       "7701961636"
+                   ],
+        "workHours":  " ",
+        "image":  "img/car-parts.png",
+        "whatsapp":  "7701961636",
+        "vehicleTypes":  "all"
+    },
+    {
+        "id":  84,
+        "title":  "مەعرەزی بروسک",
+        "description":  "بۆ کڕین و فرۆشتنی هەموو جۆرە ئۆتۆمبێلێک",
+        "location":  "سلێمانی/ تاسڵوجە - خوار پردی تاسڵوجە",
+        "phones":  [
+                       "7702202025",
+                       "7502202025"
+                   ],
+        "workHours":  " ",
+        "image":  "img/car-parts.png",
+        "whatsapp":  "7702202025",
+        "vehicleTypes":  "all"
+    },
+    {
+        "id":  85,
+        "title":  "کۆمپانیای گۆڤەند",
+        "description":  "بۆ کڕین و فرۆشتنی هەموو جۆرە ئۆتۆمبێلێک",
+        "location":  "سلێمانی/ تاسڵوجە - خوار پردی تاسڵوجە",
+        "phones":  [
+                       "7701438070",
+                       "7501438070"
+                   ],
+        "workHours":  " ",
+        "image":  "img/car-parts.png",
+        "whatsapp":  "7701438070",
+        "vehicleTypes":  "all"
+    }
+]

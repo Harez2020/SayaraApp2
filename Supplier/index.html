@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SayaraApp | پارچەفرۆشەکان</title>
+    <meta name="description" content="پارچەفرۆشەکان بۆ ئۆتۆمبێل لە عێراق" />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="icon" type="image/png" href="../Delivery/img/sayaralogo192.png">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic&family=Noto+Sans+Arabic&family=Poppins&display=swap" rel="stylesheet" />
+    
+    <link rel="stylesheet" href="../Delivery/style.css" />
+    <link rel="stylesheet" href="../Delivery/mobile.css" media="(max-width: 768px)" />
+</head>
+<body>
+    <!-- Navigation -->
+    <div class="nav-overlay" onclick="toggleMenu()"></div>
+    <nav class="main-nav">
+        <div class="nav-container">
+            <a href="../Delivery/" class="nav-logo">
+                <img src="../Delivery/img/sayaralogo192.png" alt="SayaraApp">
+                <span>سەیارە ئەپ</span>
+            </a>
+
+            <button class="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="nav-links">
+                <li><a href="../Delivery/">خزمەتگوزاری گەڕۆک</a></li>
+                <li><a href="./" class="active">پارچەفرۆش</a></li>
+                <li><a href="../Form/">داواکردنی پارچە</a></li>
+                <li><a href="../AboutUs/">دەربارەی ئێمە</a></li>
+                <li><a href="../SocialMedia/">سۆشیاڵ میدیا</a></li>
+                <li><a href="../ContactUs/">پەیوەندی</a></li>
+                <li><a href="../Share/">هاوبەشی بکە</a></li>
+                <li><a href="../termandprivacy/privacy.html">سیاسەتی پاراستنی نهێنی</a></li>
+                <li><a href="../termandprivacy/terms.html">مەرج و ڕێنماییەکان</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Load navigation JS immediately so toggleMenu is available -->
+    <script src="../Delivery/translations.js"></script>
+    <script src="../Delivery/PWA.js"></script>
+    <script src="../Delivery/Navigation.js"></script>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <h1 class="hero-title">پارچەی یەدەگی ئۆتۆمبێل لە عێراق</h1>
+        
+        <div class="hero-container">
+            <div class="hero-filter-box">
+                <p class="hero-subtitle">١٠٠٪ بەخۆڕایی</p>
+                <h2>پارچەکەت لێرە بدۆزەرەوە</h2>
+                                <!-- Service Type Buttons -->
+                    <div class="branch-selector">
+                        <button class="branch-btn active" data-target="parts" onclick="selectBranch('parts')">
+                            <span class="icon">⚙️</span> پارچەی یەدەگ
+                        </button>
+                        <button class="branch-btn" data-target="repair" onclick="selectBranch('repair')">
+                            <span class="icon">🔧</span> چاککردنەوە
+                        </button>
+                        <button class="branch-btn" data-target="scrap" onclick="selectBranch('scrap')">
+                            <span class="icon">♻️</span> سکراب
+                        </button>
+                    </div>
+
+                    <div class="search-box-container">
+                        <input type="text" id="searchInput" placeholder="گەڕان بەپێی بابەت، جۆر، یان شوێن..." oninput="filterCards()" style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ddd; font-family: inherit;">
+                    </div>
+                    
+                    <!-- Brand Grid Filter -->
+                    <div id="brandGrid" class="brand-grid">
+                        <button class="brand-card active" data-target="all" onclick="selectBrand('all')">
+                            <span>هەموو</span>
+                        </button>
+                        
+                        <button class="brand-card" data-target="toyota" onclick="selectBrand('toyota')">
+                            <img src="img/toyota.png" alt="Toyota">
+                            <span>Toyota</span>
+                        </button>
+                        <button class="brand-card" data-target="nissan" onclick="selectBrand('nissan')">
+                            <img src="img/nissan.png" alt="Nissan">
+                            <span>Nissan</span>
+                        </button>
+                        <button class="brand-card" data-target="hyundai" onclick="selectBrand('hyundai')">
+                            <img src="img/hyundai.png" alt="Hyundai">
+                            <span>Hyundai</span>
+                        </button>
+                        <button class="brand-card" data-target="kia" onclick="selectBrand('kia')">
+                            <img src="img/kia.png" alt="Kia">
+                            <span>Kia</span>
+                        </button>
+                        
+                        <button class="brand-card" data-target="mercedes" onclick="selectBrand('mercedes')">
+                            <img src="img/mercedes.png" alt="Mercedes">
+                            <span>Mercedes</span>
+                        </button>
+                        <button class="brand-card" data-target="bmw" onclick="selectBrand('bmw')">
+                            <img src="img/bmw.png" alt="BMW">
+                            <span>BMW</span>
+                        </button>
+                        <button class="brand-card" data-target="chevrolet" onclick="selectBrand('chevrolet')">
+                            <img src="img/chevrolet.png" alt="Chevrolet">
+                            <span>Chevrolet</span>
+                        </button>
+                        <button class="brand-card" data-target="ford" onclick="selectBrand('ford')">
+                            <img src="img/ford.png" alt="Ford">
+                            <span>Ford</span>
+                        </button>
+
+                        <button class="brand-card" data-target="jeep" onclick="selectBrand('jeep')">
+                            <img src="img/jeep.png" alt="Jeep">
+                            <span>Jeep</span>
+                        </button>
+                        <button class="brand-card" data-target="mitsubishi" onclick="selectBrand('mitsubishi')">
+                            <img src="img/mitsubishy.png" alt="Mitsubishi">
+                            <span>Mitsubishi</span>
+                        </button>
+                        
+                        <!-- Text-only / Placeholders for others -->
+                        <button class="brand-card" data-target="mazda" onclick="selectBrand('mazda')">
+                            <span>Mazda</span>
+                        </button>
+                        <button class="brand-card" data-target="opel" onclick="selectBrand('opel')">
+                            <span>Opel</span>
+                        </button>
+
+                        <!-- Regional -->
+                        <button class="brand-card" data-target="korean" onclick="selectBrand('korean')">
+                            <span>کۆری</span>
+                        </button>
+                        <button class="brand-card" data-target="japanese" onclick="selectBrand('japanese')">
+                            <span>یابانی</span>
+                        </button>
+                        <button class="brand-card" data-target="american" onclick="selectBrand('american')">
+                            <span>ئەمەریکی</span>
+                        </button>
+                        <button class="brand-card" data-target="chinese" onclick="selectBrand('chinese')">
+                            <span>چینی</span>
+                        </button>
+                    </div>
+
+                    <select id="locationFilter" onchange="filterCards()">
+                        <option value="all">هەموو شوێنەکان</option>
+                        <option value="هەولێر">هەولێر (Hawler)</option>
+                        <option value="سلێمانی">سلێمانی (Slemani)</option>
+                        <option value="بەغداد">بەغداد (Baghdad)</option>
+                        <option value="Online">ئۆنلاین (Online)</option>
+                    </select>
+                <button class="hero-search-btn" onclick="filterCards()">
+                    🔍 گەڕان
+                </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="hero-features">
+        <div class="hero-features-container">
+            <ul class="hero-features-list">
+                <li>کات و پارە پاشەکەوت بکە</li>
+                <li>گەڕان لە ناو +١٠٠٠ پارچەی یەدەگی</li>
+                <li>نرخ و مەوجوودی پارچە بزانە</li>
+                <li>تۆڕی پارچەفرۆشانی متمانەپێکراو</li>
+                <li>پارچەفرۆشی پشتڕاستکراوە لە سەرانسەری عێراق</li>
+            </ul>
+            
+            <div class="hero-map">
+                <img src="img/iraq.png" alt="Iraq Map" style="max-width: 200px; height: auto;">
+                <p>تۆڕی سەرانسەری عێراق</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cards Section -->
+    <section class="cards">
+        <h1>وەکیل و فرۆشیارەکان</h1>
+        <div id="cardsContainer"></div>
+    </section>
+
+  <script src="suppliers.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          loadCards();
+        });
+    </script>
+</body>
+</html>

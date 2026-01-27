@@ -1,410 +1,196 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Delivery Services</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic&family=Noto+Sans+Arabic&family=Poppins&display=swap" rel="stylesheet">
-
-    
-    <style>
-        *{
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        :root{
-            --primary: #f84269;
-            /* page colors */
-            --color-background: #ffffff;
-            --color-text: #0D171C;
-            --color-dark: #121212;
-            --color-light: #ffffff;
-
-            /* font family fallbacks (replace or include font-face/import as needed) */
-            --font-poppins: 'Poppins';
-            --font-noto-arabic: 'Noto Sans Arabic';
-            --font-noto-kufi-arabic: 'Noto Kufi Arabic';
-        }
-        
-        body{
-              /* use the background color variable (was referencing a non-existent --color-primary in original) */
-              background-color: #f5f5f5;
-              font-family: var(--font-noto-kufi-arabic), var(--font-noto-arabic);
-              color: var(--color-text);
-              padding: 20px 0;
-              line-height: 1.6;
-        }
-
-        h1{
-            text-align: center;
-            margin: 20px 0;
-            font-size: 2rem;
-            font-weight: bold;
-            color: var(--color-text);
-            background-color: #ffffff;
-            padding: 15px;
-            border-radius: 8px;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-            width: 90%;
-            max-width: 1200px;
-            margin: 20px auto;
-        }
-        
-        /* Filter section styling */
-        .filters {
-            display: flex;
-            justify-content: center;
-            gap: 25px;
-            margin: 25px auto;
-            flex-wrap: wrap;
-            padding: 20px;
-            background-color: #f9f9f9;
-            border-radius: 10px;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-            width: 90%;
-            max-width: 1200px;
-        }
-        
-        .filter-group {
-            display: flex;
-            flex-direction: column;
-            min-width: 200px;
-        }
-        
-        .filter-group label {
-            font-weight: bold;
-            margin-bottom: 5px;
-            color: var(--color-text);
-        }
-
-        /* Visual label used for read-only fields inside cards */
-        .field-label {
-            font-weight: 700;
-            margin-left: .4rem;
-            color: var(--primary);
-        }
-        
-        .filter-group select {
-            padding: 8px;
-            border: 2px solid var(--primary);
-            border-radius: 4px;
-            background-color: white;
-            font-family: var(--font-noto-arabic);
-            font-size: 1rem;
-        }
-        
-        .card{
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            background-color: #ffffff;
-            align-items: center;
-            padding: 15px 20px;
-            margin: 20px auto;
-            width: 90%;
-            max-width: 1200px;
-            border: 2px solid var(--primary);
-            border-radius: 8px;
-            gap: 15px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        }
-
-        .cards {
-            max-width: 1300px;
-            margin: 0 auto;
-            padding: 0 15px;
-        }
-
-        hr{
-           border: none;
-           border: 1px solid rgba(167, 160, 167, 0);
-        }
-
-        /* WhatsApp-like button styling */
-        .whatsUp{
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background-color: var(--primary); /* official WhatsApp green */
-            color: var(--color-light);
-            padding: 8px 12px;
-            border-radius: 999px;
-            text-decoration: none;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.12);
-            transition: transform .12s ease, opacity .12s ease, box-shadow .12s ease;
-            border: 1px solid rgba(0, 0, 0, 0.322);
-            font-weight: 600;
-        }
-        /* Desktop / hover interactions */
-        .whatsUp:hover,
-        .whatsUp:focus{
-            transform: translateY(-3px) scale(1.01);
-            opacity: 0.98;
-            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.24);
-            outline: none;
-        }
-        .whatsUp:active{
-            transform: translateY(0) scale(.995);
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.26);
-            opacity: 0.98;
-        }
-        .whatsUp img{ width: 20px; height: 20px; display:block; filter: none; }
-        .whatsUp .wa-text{ color: #000000; font-size: 1.1rem; line-height:1; display:inline-block; font-weight: 700; text-shadow: #ffffff 0px 0px 4px ; }
-
-        /* Mobile: make the button full-width and more tappable */
-        @media (max-width: 425px){
-            .whatsUp{
-                display: flex;
-                width: 100%;
-                justify-content: center;
-                padding: 5px 14px;
-                gap: 8px;
-                border-radius: 12px;
-                font-size: 0.5rem;
-            }
-            .whatsUp img{ width: 16px; height: 16px; }
-            /* keep the label visible on mobile as a clear affordance */
-            .whatsUp .wa-text{ display:inline-block; font-size: 0.7rem; }
-        }
-        @media (max-width: 425px){
-            .card{
-                flex-direction: column;
-                text-align: right;
-                gap: 10px;
-                padding: 15px;
-                width: 90%;
-                margin: 15px auto;
-                box-shadow: 0 1px 4px rgba(0,0,0,0.08);
-            }
-            p{
-                text-align: right;
-            }
-            /* center text on small screens for better layout */
-            .text{
-                align-items: right;
-                text-align: right;
-            }
-            hr{
-                width: 90%;
-                border: 1px solid rgb(167, 160, 167);
-                border-radius: 50px;
-            }
-            
-            .filters {
-                flex-direction: column;
-                align-items: center;
-                gap: 10px;
-            }
-            
-            .filter-group {
-                width: 100%;
-                max-width: 300px;
-            }
-            h1{
-                font-size: 1.5rem;
-            }
-        }
-
-        .logoo{
-            flex-grow: 2;
-        }
-        .logo img{
-            /* responsive logo sizing: scale between 80px and 160px depending on viewport */
-            width: clamp(80px, 12vw, 160px);
-            height: auto;
-            max-height: 160px;
-            object-fit: contain;
-            display: block;
-            background: transparent;
-            border-radius: 6px;
-            margin: 0 auto;
-        }
-
-        .text{
-            flex-grow: 2;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            padding: 0 15px;
-            align-items: right;
-        }
-
-        
-        .text , .location , .phone , .time , .title{
-            align-items: right;
-            margin: 3px;
-        }
-
-        /* use an external SVG icon (masked) so it can be colored via CSS variable */
-        .location::before{
-            content: "";
-            display: inline-block;
-            vertical-align: middle;
-            width: 1.05rem;
-            height: 1.05rem;
-            margin-left: .4rem;
-            background-color: var(--primary);
-            -webkit-mask: url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/icons/geo-alt-fill.svg') no-repeat center / contain;
-            mask: url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/icons/geo-alt-fill.svg') no-repeat center / contain;
-        }
-
-        /* clock icon for .time (masked external SVG, colored with var(--primary)) */
-        .time::before{
-            content: "";
-            display: inline-block;
-            vertical-align: middle;
-            width: 1.05rem;
-            height: 1.05rem;
-            margin-left: .4rem;
-            background-color: var(--primary);
-            -webkit-mask: url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/icons/clock-fill.svg') no-repeat center / contain;
-            mask: url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/icons/clock-fill.svg') no-repeat center / contain;
-        }
-
-        .title{
-            font-size: 1.5rem;
-        }
-
-        .description{
-            text-align: right;
-        }
-        .location , .phone , .time {
-            font-size: 0.8rem;
-        }
-        @media (max-width: 600px){
-            .description{
-                padding: 3px 10px;
-            }
-            .title{
-                font-size: 1rem;
-            }
-            .text , .location , .phone , .time , .description{
-            font-size: 0.6rem;
-            text-align: right;
-            }
-            pre{
-                display: none;
-            }
-            .text{
-                margin-left: auto;
-            }
-            .ReadMore , .preview , .full-view , .title , .description , .location , .phone , .time { 
-            margin: 3px;
-            } 
-        }
-
-        .phone img{
-            width: 40px;
-            height: 40px;
-            object-fit: cover;
-        }
-
-        .ReadMore{
-            display: flex;
-            justify-content: right;
-            align-items: right;
-            font-weight: 700;
-            font-size: 0.7rem;
-            margin: 2px;
-            color: var(--primary);
-            cursor: pointer;
-            text-decoration: none;
-        }
-        
-        /* Preview paragraph styling */
-        .preview {
-            display: block;
-            margin-bottom: 8px;
-        }
-        
-        /* Full view paragraph styling - initially hidden */
-        .full-view {
-            display: none;
-        }
-        
-        /* Show full view when expanded */
-        .expanded .full-view {
-            display: block;
-        }
-        
-        /* Hide preview when expanded */
-        .expanded .preview {
-            display: none;
-        }
-        
-        /* Hidden card class for filtering */
-        .card.hidden {
-            display: none;
-        }
-    </style>
-    <script>
-        // CSP diagnostic: logs Content Security Policy violations so we can find the offender
-        document.addEventListener('securitypolicyviolation', function(e) {
-            try {
-                console.warn('CSP Violation:', {
-                    blockedURI: e.blockedURI,
-                    effectiveDirective: e.effectiveDirective,
-                    violatedDirective: e.violatedDirective,
-                    sourceFile: e.sourceFile,
-                    statusCode: e.statusCode,
-                    lineNumber: e.lineNumber,
-                    columnNumber: e.columnNumber
-                });
-            } catch (err) {
-                console.warn('CSP violation detected (could not serialize event):', err);
-            }
-        });
-    </script>
-</head>
-<body>
+  <html lang="ar" dir="rtl">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>SayaraApp | Mobile Car Services in Kurdistan</title>
+      <meta name="description" content="Fast and reliable mobile car services in Kurdistan. Find professional mechanics, car wash, fuel, and roadside assistance. SayaraApp connects you with the best nearby services." />
       
-    <section class="cards">
-        <h1>خزمەتگوزاری گەڕۆک</h1>
+      <!-- Open Graph / Social Media -->
+      <meta property="og:type" content="website" />
+      <meta property="og:title" content="SayaraApp | Mobile Car Services" />
+      <meta property="og:description" content="Professional mobile car services and delivery in Kurdistan. Get roadside assistance, mechanics, and more instantly." />
+      <meta property="og:image" content="img/logo-512.png" />
+      <meta property="og:url" content="https://sayaraapp.com" />
+      
+      <link rel="canonical" href="https://sayaraapp.com" />
+
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="icon" type="image/png" href="img/sayaralogo192.png">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic&family=Noto+Sans+Arabic&family=Poppins&display=swap"
+        rel="stylesheet"
+      />
+      
+
+      <!-- PWA Meta Tags -->
+      <link rel="manifest" href="manifest.json" />
+      <meta name="theme-color" content="#f84269" />
+      <meta name="mobile-web-app-capable" content="yes" />
+      <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+      <meta name="apple-mobile-web-app-title" content="SayaraApp" />
+      <link rel="apple-touch-icon" href="img/logo-192.png" />
+
+      <!-- External CSS -->
+      <link rel="stylesheet" href="style.css" />
+      <link rel="stylesheet" href="mobile.css" media="(max-width: 768px)" />
+
+      <script>
+        // CSP diagnostic: logs Content Security Policy violations so we can find the offender
+        document.addEventListener("securitypolicyviolation", function (e) {
+          try {
+            console.warn("CSP Violation:", {
+              blockedURI: e.blockedURI,
+              effectiveDirective: e.effectiveDirective,
+              violatedDirective: e.violatedDirective,
+              sourceFile: e.sourceFile,
+              statusCode: e.statusCode,
+              lineNumber: e.lineNumber,
+              columnNumber: e.columnNumber,
+            });
+          } catch (err) {
+            console.warn(
+              "CSP violation detected (could not serialize event):",
+              err
+            );
+          }
+        });
+      </script>
+    </head>
+    <body>
+      <!-- Navigation -->
+      <div class="nav-overlay" onclick="toggleMenu()"></div>
+      <nav class="main-nav">
+          <div class="nav-container">
+              <a href="./" class="nav-logo">
+                  <img src="img/sayaralogo192.png" alt="SayaraApp">
+                  <span>سەیارە ئەپ</span>
+              </a>
+
+              <button class="hamburger" onclick="toggleMenu()">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+              </button>
+
+              <ul class="nav-links">
+                  <li><a href="./" class="active">خزمەتگوزاری</a></li>
+                  <li><a href="../Supplier/">پارچەفرۆش</a></li>
+                  <li><a href="../Form/">داواکردنی پارچە</a></li>
+                  <li><a href="../AboutUs/">دەربارەی ئێمە</a></li>
+                  <li><a href="../SocialMedia/">سۆشیاڵ میدیا</a></li>
+                  <li><a href="../Share/">هاوبەشی بکە</a></li>
+                  <li><a href="../termandprivacy/privacy.html">سیاسەتی پاراستنی نهێنی</a></li>
+                  <li><a href="../termandprivacy/terms.html">مەرج و ڕێنماییەکان</a></li>
+              </ul>
+          </div>
+      </nav>
+      <!-- Load navigation JS immediately so toggleMenu is available -->
+      <script src="translations.js"></script>
+      <script src="PWA.js"></script>
+      <script src="Navigation.js"></script>
+
+      <section class="cards">
         
-        <!-- Filter Section l -->
-        <div class="filters">
-            <div class="filter-group">
-                <label for="locationFilter">شوێن:</label>
-                <select id="locationFilter" onchange="filterCards()">
-                    <option value="all">هەموو شوێنەکان</option>
-                    <option value="سلێمانی">سلێمانی</option>
-                    <option value="هەولێر">هەولێر</option>
-                    <option value="کۆیە">کۆیە</option>
-                    <option value="گەرمیان">گەرمیان</option>
-                    <option value="سەید سادق">سەید سادق</option>
-                </select>
+        <!-- Advertising Slider -->
+        <div class="slider-container" id="adSlider">
+            <div class="slider-wrapper">
+                <!-- Slides will be injected here by slider.js -->
             </div>
             
-            <div class="filter-group">
-                <label for="serviceFilter">جۆری خزمەتگوزاری:</label>
-                <select id="serviceFilter" onchange="filterCards()">
-                    <option value="all">هەموو خزمەتگوزاریەکان</option>
-                    <option value="mechanic">فیتەری گەڕۆک</option>
-                    <option value="car_wash">غەسلی گەڕۆک</option>
-                    <option value="fuel_pump">فیت پەمپ</option>
-                    <option value="tire">وایەرمەن</option>
-                    <option value="transport">کرێن فلات</option>
-                    <option value="locksmith">کلیل سازی</option>
-                    <option value="other">هیتر</option>
-                </select>
+            <!-- Navigation Buttons -->
+            <button class="slider-btn prev" onclick="moveSlide(-1)">❮</button>
+            <button class="slider-btn next" onclick="moveSlide(1)">❯</button>
+            
+            <!-- Thumbnails -->
+            <div class="slider-thumbnails">
+               <!-- Thumbnails will be injected here by slider.js -->
             </div>
         </div>
-        
+
+        <h1>خزمەتگوزاری گەڕۆک</h1>
+
+        <!-- Branch Selector (Cars, Motors, Hybrids) -->
+        <div class="branch-selector">
+            <button class="branch-btn active" data-target="car" onclick="selectBranch('car')">
+                <span class="icon">🚗</span> ئۆتۆمبێل
+            </button>
+            <button class="branch-btn" data-target="motor" onclick="selectBranch('motor')">
+                <span class="icon">🏍️</span> ماتۆڕسکیل
+            </button>
+            <button class="branch-btn" data-target="hybrid" onclick="selectBranch('hybrid')">
+                <span class="icon">🏪</span> هایبرید
+            </button>
+        </div>
+
+        <!-- Filter Toggle Button (Mobile) -->
+        <button class="filter-toggle-btn" onclick="toggleFilters()">
+            <span>🔍 فلتەرەکان</span>
+            <span class="toggle-icon">▼</span>
+        </button>
+
+        <!-- Filter Section -->
+        <div class="filters">
+          <div class="filter-group">
+            <label for="locationFilter">شوێن:</label>
+            <select id="locationFilter" active="active" onchange="filterCards()">
+              <option value="all">هەموو شوێنەکان</option>
+              <option value="سلێمانی">سلێمانی</option>
+              <option value="هەولێر">هەولێر</option>
+              <option value="کۆیە">کۆیە</option>
+              <option value="گەرمیان">گەرمیان</option>
+              <option value="سەید سادق">سەید سادق</option>
+            </select>
+          </div>
+
+          <div class="filter-group">
+            <label for="serviceFilter">جۆری خزمەتگوزاری:</label>
+            <select id="serviceFilter" onchange="filterCards()">
+              <option value="all">هەموو خزمەتگوزاریەکان</option>
+              <option value="mechanic">فیتەری گەڕۆک</option>
+              <option value="car_wash">غەسلی گەڕۆک</option>
+              <option value="fuel_pump">فیت پەمپ</option>
+              <option value="tire">وایەرمەن</option>
+              <option value="transport">کرێن فلات</option>
+              <option value="locksmith">کلیل سازی</option>
+              <option value="other">هیتر</option>
+            </select>
+          </div>
+        </div>
+        <script>
+          function toggleFilters() {
+            const btn = document.querySelector('.filter-toggle-btn');
+            const filters = document.querySelector('.filters');
+            btn.classList.toggle('open');
+            filters.classList.toggle('open');
+          }
+        </script>
+
         <!-- Container for dynamically generated cards -->
         <div id="cardsContainer"></div>
-    </section>
-    
-    <!-- External JavaScript files -->
-    <script src="services.js"></script>
-    <script>
+      </section>
+
+      <!-- External JavaScript files -->
+    <script src="slider.js"></script>
+  <script src="services.js"></script>
+      <script>
         // Load cards when page loads
-        document.addEventListener('DOMContentLoaded', function() {
-            loadCards();
+        document.addEventListener("DOMContentLoaded", function () {
+          loadCards();
         });
-    </script>
-</body>
-</html>
+
+        // Register Service Worker
+        if ("serviceWorker" in navigator) {
+          window.addEventListener("load", () => {
+            navigator.serviceWorker
+              .register("sw.js")
+              .then((reg) => console.log("Service Worker registered!", reg))
+              .catch((err) =>
+                console.log("Service Worker registration failed: ", err)
+              );
+          });
+        }
+      </script>
+    </body>
+  </html>

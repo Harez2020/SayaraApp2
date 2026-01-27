@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ku" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SayaraApp | مەرج و ڕێنماییەکان</title>
+    <link rel="icon" type="image/png" href="../Delivery/img/sayaralogo192.png">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic&family=Noto+Sans+Arabic&family=Poppins&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="../Delivery/style.css">
+    <link rel="stylesheet" href="../Delivery/mobile.css" media="(max-width: 768px)">
+    
+    <style>
+        /* Specific page styles */
+        .page-container {
+            background: #fff;
+            padding: 40px;
+            margin: 30px auto;
+            width: 90%;
+            max-width: 900px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        .page-content {
+            line-height: 1.8;
+            color: #444;
+            font-size: 1.05rem;
+        }
+        h1 {
+            border-bottom: 2px solid #eee;
+            padding-bottom: 15px;
+            margin-bottom: 25px;
+        }
+        strong {
+            font-weight: bold;
+            color: var(--primary);
+        }
+    </style>
+</head>
+<body id="page-terms">
+    <!-- Navigation -->
+    <div class="nav-overlay" onclick="toggleMenu()"></div>
+    <nav class="main-nav">
+        <div class="nav-container">
+            <a href="../Delivery/" class="nav-logo">
+                <img src="../Delivery/img/sayaralogo192.png" alt="SayaraApp">
+                <span>سەیارە ئەپ</span>
+            </a>
+
+            <button class="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="nav-links">
+                <li><a href="../Delivery/">خزمەتگوزاری</a></li>
+                <li><a href="../Supplier/">پارچەفرۆش</a></li>
+                <li><a href="../Form/">داواکردنی پارچە</a></li>
+                <li><a href="../AboutUs/">دەربارەی ئێمە</a></li>
+                <li><a href="../SocialMedia/">سۆشیاڵ میدیا</a></li>
+                <li><a href="../ContactUs/">پەیوەندی</a></li>
+                <li><a href="../Share/">هاوبەشی بکە</a></li>
+                <li><a href="privacy.html">سیاسەتی پاراستنی نهێنی</a></li>
+                <li><a href="terms.html" class="active">مەرج و ڕێنماییەکان</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Load navigation JS immediately so toggleMenu is available -->
+    <script src="../Delivery/translations.js"></script>
+    <script src="../Delivery/PWA.js"></script>
+    <script src="../Delivery/Navigation.js"></script>
+
+
+    <div class="page-container" id="content-container">
+        <script src="script.js"></script>
+    </div>
+
+    
+</body>
+</html>

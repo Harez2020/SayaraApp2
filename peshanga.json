@@ -1,0 +1,336 @@
+﻿[
+    {
+        "id":  7,
+        "title":  "پێشانگای ئەحمەد خۆشناو",
+        "description":  "فرۆشتنی هەموو جۆرە پارچەیەکی یەدەگی نیسان (ئالتیما، سەنترا، ماکسیما، هتد)",
+        "location":  "هەولێر",
+        "phones":  [
+                       "7504306359"
+                   ],
+        "workHours":  " ",
+        "image":  "img/nissan-toyota-kia.png",
+        "whatsapp":  "7504306359",
+        "vehicleTypes":  "nissan, all, parts"
+    },
+    {
+        "id":  10,
+        "title":  "پێشانگای متوەکیل",
+        "description":  "بازرگانی ئامراز و پارچەی یەدەگی ئۆتۆمبێل.",
+        "location":  "هەولێر",
+        "phones":  [
+
+                   ],
+        "workHours":  " ",
+        "image":  "img/car-parts.png",
+        "whatsapp":  " ",
+        "vehicleTypes":  "parts"
+    },
+    {
+        "id":  88,
+        "title":  "پێشانگای هەڵگورد",
+        "description":  "بۆ کڕین و فرۆشتنی هەموو جۆرە ئۆتۆمبێلێک",
+        "location":  "سلێمانی/ تاسڵوجە - خوار پردی تاسڵوجە",
+        "phones":  [
+                       "7701544778",
+                       "7701991829"
+                   ],
+        "workHours":  " ",
+        "image":  "img/car-parts.png",
+        "whatsapp":  "7701544778",
+        "vehicleTypes":  "all"
+    },
+    {
+        "id":  89,
+        "title":  "پێشانگای ئۆتۆمبێلی مەریوان",
+        "description":  "بۆ کڕین و فرۆشتنی هەموو جۆرە ئۆتۆمبێلێک",
+        "location":  "سلێمانی/ تاسڵوجە - خوار پردی تاسڵوجە",
+        "phones":  [
+                       "7701520150",
+                       "7501520150"
+                   ],
+        "workHours":  " ",
+        "image":  "img/car-parts.png",
+        "whatsapp":  "7701520150",
+        "vehicleTypes":  "all"
+    },
+    {
+        "id":  90,
+        "title":  "پێشانگای ئۆتۆمبێلی میران",
+        "description":  "بۆ کڕین و فرۆشتنی هەموو جۆرە ئۆتۆمبێلێک",
+        "location":  "سلێمانی/ تاسڵوجە - خوار پردی تاسڵوجە",
+        "phones":  [
+                       "7701530666",
+                       "7501530666"
+                   ],
+        "workHours":  " ",
+        "image":  "img/car-parts.png",
+        "whatsapp":  "7701530666",
+        "vehicleTypes":  "all"
+    },
+    {
+        "id":  91,
+        "title":  "پێشانگای ئۆتۆمبێلی توانا",
+        "description":  "بۆ کڕین و فرۆشتنی هەموو جۆرە ئۆتۆمبێلێک",
+        "location":  "سلێمانی/ تاسڵوجە - خوار پردی تاسڵوجە",
+        "phones":  [
+                       "7701574061",
+                       "7501149494"
+                   ],
+        "workHours":  " ",
+        "image":  "img/car-parts.png",
+        "whatsapp":  "7701574061",
+        "vehicleTypes":  "all"
+    },
+    {
+        "id":  92,
+        "title":  "پێشانگای ئۆتۆمبێلی شنە",
+        "description":  "بۆ کڕین و فرۆشتنی هەموو جۆرە ئۆتۆمبێلێک",
+        "location":  "سلێمانی/ تاسڵوجە - خوار پردی تاسڵوجە",
+        "phones":  [
+                       "7701530752",
+                       "7501530752"
+                   ],
+        "workHours":  " ",
+        "image":  "img/car-parts.png",
+        "whatsapp":  "7701530752",
+        "vehicleTypes":  "all"
+    },
+    {
+        "id":  93,
+        "title":  "پێشانگای ئۆتۆمبێلی دەروازە",
+        "description":  "بۆ کڕین و فرۆشتنی هەموو جۆرە ئۆتۆمبێلێک",
+        "location":  "سلێمانی/ تاسڵوجە - خوار پردی تاسڵوجە",
+        "phones":  [
+                       "7701571213",
+                       "7701962319"
+                   ],
+        "workHours":  " ",
+        "image":  "img/car-parts.png",
+        "whatsapp":  "7701571213",
+        "vehicleTypes":  "all"
+    },
+    {
+        "id":  94,
+        "title":  "پێشانگای ئۆتۆمبێلی هیوا",
+        "description":  "بۆ کڕین و فرۆشتنی هەموو جۆرە ئۆتۆمبێلێک",
+        "location":  "سلێمانی/ تاسڵوجە - خوار پردی تاسڵوجە",
+        "phones":  [
+                       "7701561081",
+                       "7501561081"
+                   ],
+        "workHours":  " ",
+        "image":  "img/car-parts.png",
+        "whatsapp":  "7701561081",
+        "vehicleTypes":  "all"
+    },
+    {
+        "id":  95,
+        "title":  "پێشانگای ئۆتۆمبێلی ئاریا",
+        "description":  "بۆ کڕین و فرۆشتنی هەموو جۆرە ئۆتۆمبێلێک",
+        "location":  "سلێمانی/ تاسڵوجە - خوار پردی تاسڵوجە",
+        "phones":  [
+                       "7701525048",
+                       "7501525048"
+                   ],
+        "workHours":  " ",
+        "image":  "img/car-parts.png",
+        "whatsapp":  "7701525048",
+        "vehicleTypes":  "all"
+    },
+    {
+        "id":  96,
+        "title":  "پێشانگای ئۆتۆمبێلی هەرێم",
+        "description":  "بۆ کڕین و فرۆشتنی هەموو جۆرە ئۆتۆمبێلێک",
+        "location":  "سلێمانی/ تاسڵوجە - خوار پردی تاسڵوجە",
+        "phones":  [
+                       "7701527581",
+                       "7501527581"
+                   ],
+        "workHours":  " ",
+        "image":  "img/car-parts.png",
+        "whatsapp":  "7701527581",
+        "vehicleTypes":  "all"
+    },
+    {
+        "id":  97,
+        "title":  "پێشانگای ئۆتۆمبێلی سیروان",
+        "description":  "بۆ کڕین و فرۆشتنی هەموو جۆرە ئۆتۆمبێلێک",
+        "location":  "سلێمانی/ تاسڵوجە - خوار پردی تاسڵوجە",
+        "phones":  [
+                       "7701566535",
+                       "7501566535"
+                   ],
+        "workHours":  " ",
+        "image":  "img/car-parts.png",
+        "whatsapp":  "7701566535",
+        "vehicleTypes":  "all"
+    },
+    {
+        "id":  98,
+        "title":  "پێشانگای ئۆتۆمبێلی شاڵاو",
+        "description":  "بۆ کڕین و فرۆشتنی هەموو جۆرە ئۆتۆمبێلێک",
+        "location":  "سلێمانی/ تاسڵوجە - خوار پردی تاسڵوجە",
+        "phones":  [
+                       "7701546272",
+                       "7501192828"
+                   ],
+        "workHours":  " ",
+        "image":  "img/car-parts.png",
+        "whatsapp":  "7701546272",
+        "vehicleTypes":  "all"
+    },
+    {
+        "id":  99,
+        "title":  "پێشانگای ئۆتۆمبێلی ئارام",
+        "description":  "بۆ کڕین و فرۆشتنی هەموو جۆرە ئۆتۆمبێلێک",
+        "location":  "سلێمانی/ تاسڵوجە - خوار پردی تاسڵوجە",
+        "phones":  [
+                       "7701594950",
+                       "7501594950"
+                   ],
+        "workHours":  " ",
+        "image":  "img/car-parts.png",
+        "whatsapp":  "7701594950",
+        "vehicleTypes":  "all"
+    },
+    {
+        "id":  100,
+        "title":  "پێشانگای ئۆتۆمبێلی هەڵکەوت",
+        "description":  "بۆ کڕین و فرۆشتنی هەموو جۆرە ئۆتۆمبێلێک",
+        "location":  "سلێمانی/ تاسڵوجە - خوار پردی تاسڵوجە",
+        "phones":  [
+                       "7701524316",
+                       "7501524316"
+                   ],
+        "workHours":  " ",
+        "image":  "img/car-parts.png",
+        "whatsapp":  "7701524316",
+        "vehicleTypes":  "all"
+    },
+    {
+        "id":  101,
+        "title":  "پێشانگای ئۆتۆمبێلی لوقمان",
+        "description":  "بۆ کڕین و فرۆشتنی هەموو جۆرە ئۆتۆمبێلێک",
+        "location":  "سلێمانی/ تاسڵوجە - خوار پردی تاسڵوجە",
+        "phones":  [
+                       "7701423854",
+                       "7501423854"
+                   ],
+        "workHours":  " ",
+        "image":  "img/car-parts.png",
+        "whatsapp":  "7701423854",
+        "vehicleTypes":  "all"
+    },
+    {
+        "id":  102,
+        "title":  "پێشانگای ئۆتۆمبێلی کاروان",
+        "description":  "بۆ کڕین و فرۆشتنی هەموو جۆرە ئۆتۆمبێلێک",
+        "location":  "سلێمانی/ تاسڵوجە - خوار پردی تاسڵوجە",
+        "phones":  [
+                       "7701925357",
+                       "7501925357"
+                   ],
+        "workHours":  " ",
+        "image":  "img/car-parts.png",
+        "whatsapp":  "7701925357",
+        "vehicleTypes":  "all"
+    },
+    {
+        "id":  103,
+        "title":  "پێشانگای ئۆتۆمبێلی سەرکەوت",
+        "description":  "بۆ کڕین و فرۆشتنی هەموو جۆرە ئۆتۆمبێلێک",
+        "location":  "سلێمانی/ تاسڵوجە - خوار پردی تاسڵوجە",
+        "phones":  [
+                       "7701423772",
+                       "7501423772"
+                   ],
+        "workHours":  " ",
+        "image":  "img/car-parts.png",
+        "whatsapp":  "7701423772",
+        "vehicleTypes":  "all"
+    },
+    {
+        "id":  104,
+        "title":  "پێشانگای ئۆتۆمبێلی خەبات",
+        "description":  "بۆ کڕین و فرۆشتنی هەموو جۆرە ئۆتۆمبێلێک",
+        "location":  "سلێمانی/ تاسڵوجە - خوار پردی تاسڵوجە",
+        "phones":  [
+                       "7701540306",
+                       "7501540306"
+                   ],
+        "workHours":  " ",
+        "image":  "img/car-parts.png",
+        "whatsapp":  "7701540306",
+        "vehicleTypes":  "all"
+    },
+    {
+        "id":  105,
+        "title":  "پێشانگای ئۆتۆمبێلی شوان",
+        "description":  "بۆ کڕین و فرۆشتنی هەموو جۆرە ئۆتۆمبێلێک",
+        "location":  "سلێمانی/ تاسڵوجە - خوار پردی تاسڵوجە",
+        "phones":  [
+                       "7701566373",
+                       "7501566373"
+                   ],
+        "workHours":  " ",
+        "image":  "img/car-parts.png",
+        "whatsapp":  "7701566373",
+        "vehicleTypes":  "all"
+    },
+    {
+        "id":  106,
+        "title":  "پێشانگای ئۆتۆمبێلی دانا",
+        "description":  "بۆ کڕین و فرۆشتنی هەموو جۆرە ئۆتۆمبێلێک",
+        "location":  "سلێمانی/ تاسڵوجە - خوار پردی تاسڵوجە",
+        "phones":  [
+                       "7701956555",
+                       "7501192525"
+                   ],
+        "workHours":  " ",
+        "image":  "img/car-parts.png",
+        "whatsapp":  "7701956555",
+        "vehicleTypes":  "all"
+    },
+    {
+        "id":  107,
+        "title":  "پێشانگای ئۆتۆمبێلی ڕەوا",
+        "description":  "بۆ کڕین و فرۆشتنی هەموو جۆرە ئۆتۆمبێلێک",
+        "location":  "سلێمانی/ تاسڵوجە - خوار پردی تاسڵوجە",
+        "phones":  [
+                       "7701541818",
+                       "7501541818"
+                   ],
+        "workHours":  " ",
+        "image":  "img/car-parts.png",
+        "whatsapp":  "7701541818",
+        "vehicleTypes":  "all"
+    },
+    {
+        "id":  108,
+        "title":  "پێشانگای ئۆتۆمبێلی ئەبوبەکر",
+        "description":  "بۆ کڕین و فرۆشتنی هەموو جۆرە ئۆتۆمبێلێک",
+        "location":  "سلێمانی/ تاسڵوجە - خوار پردی تاسڵوجە",
+        "phones":  [
+                       "7701505353",
+                       "7501505353"
+                   ],
+        "workHours":  " ",
+        "image":  "img/car-parts.png",
+        "whatsapp":  "7701505353",
+        "vehicleTypes":  "all"
+    },
+    {
+        "id":  109,
+        "title":  "پێشانگای ئۆتۆمبێلی ڕەنج",
+        "description":  "بۆ کڕین و فرۆشتنی هەموو جۆرە ئۆتۆمبێلێک",
+        "location":  "سلێمانی/ تاسڵوجە - خوار پردی تاسڵوجە",
+        "phones":  [
+                       "7701506060",
+                       "7501506060"
+                   ],
+        "workHours":  " ",
+        "image":  "img/car-parts.png",
+        "whatsapp":  "7701506060",
+        "vehicleTypes":  "all"
+    }
+]
