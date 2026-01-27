@@ -116,7 +116,7 @@ function generateCardHTML(service) {
 
     // Prepare WhatsApp link (safely encode message)
     const whatsappNumber = service.whatsapp ? String(service.whatsapp).trim() : '';
-    const waText = 'سڵاو، دەمەوێت زانیاری زیاتر وەربگرم دەربارەی خزمەتگوزاریەکەتان';
+    const waText = 'سڵاو لە لایەن ئەپی سەیارەوە هاتووم ، دەمەوێت زانیاری زیاتر وەربگرم';
     const waHref = whatsappNumber ? `https://wa.me/${encodeURIComponent(whatsappNumber)}?text=${encodeURIComponent(waText)}` : '#';
 
     return `
