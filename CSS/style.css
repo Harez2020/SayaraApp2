@@ -222,7 +222,6 @@ h1 {
   border: 1px solid var(--primary);
   border-radius: 16px;
   gap: 15px;
-  box-shadow: inset 0px 0px 10px #000000;
   overflow: hidden;
   background: #fff;
 }

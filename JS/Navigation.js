@@ -29,24 +29,16 @@ function renderMobileNav() {
     const path = window.location.pathname;
     let activePage = '';
     
-    if (path.includes('/Delivery/') || path.endsWith('SayaraApp/') || path.endsWith('index.html') && !path.includes('Supplier') && !path.includes('Form') && !path.includes('SocialMedia') && !path.includes('AboutUs') && !path.includes('Share')) {
+    if (path.includes('/Delivery/') || path.endsWith('SayaraApp/') || path.endsWith('index.html') && !path.includes('Supplier') && !path.includes('SocialMedia') && !path.includes('AboutUs') && !path.includes('ContactUs')) {
         activePage = 'home';
     } else if (path.includes('/Supplier/')) {
         activePage = 'supplier';
-    } else if (path.includes('/Form/')) {
-        activePage = 'form';
     } else if (path.includes('/SocialMedia/')) {
         activePage = 'social';
     } else if (path.includes('/AboutUs/')) {
         activePage = 'about';
     } else if (path.includes('/ContactUs/')) {
         activePage = 'contact';
-    } else if (path.includes('/Share/')) {
-        activePage = 'share';
-    } else if (path.includes('privacy.html')) {
-        activePage = 'privacy';
-    } else if (path.includes('terms.html')) {
-        activePage = 'terms';
     }
 
     // Helper to add 'active' class
@@ -58,13 +50,9 @@ function renderMobileNav() {
       supplier: "پارچەفرۆش",
       more: "زیاتر",
       moreTitle: "بەشەکانی تر",
-      form: "داواکردن",
-      social: "سۆشیاڵ",
-      about: "دەربارە",
-      contact: "پەیوەندی",
-      share: "بڵاوکردنەوە",
-      privacy: "پاراستن",
-      terms: "مەرجەکان"
+      social: "پلاتفۆڕمەکانمان",
+      about: "ئێمە کێین",
+      contact: "پەیوەندیبکە"
     };
 
     // Determine prefix based on current depth
@@ -73,7 +61,7 @@ function renderMobileNav() {
     
     // Simple heuristic: if we match one of the known subfolders, we are deep.
     // Otherwise we are at root.
-    const knownSubfolders = ['Supplier', 'Form', 'SocialMedia', 'AboutUs', 'ContactUs', 'Share', 'termandprivacy'];
+    const knownSubfolders = ['Supplier', 'SocialMedia', 'AboutUs', 'ContactUs'];
     const isSubfolder = knownSubfolders.some(folder => path.includes(folder));
     
     const rootPrefix = isSubfolder ? '../' : './';
@@ -112,10 +100,6 @@ function renderMobileNav() {
             <button class="close-menu-btn" onclick="toggleMoreMenu()">×</button>
           </div>
           <div class="menu-grid">
-            <a href="${getLink('Form')}" class="menu-item ${isActive('form')}">
-              <div class="menu-icon" style="background: linear-gradient(135deg, #f84269, #ff6b8a);">📝</div>
-              <span>${t.form}</span>
-            </a>
             <a href="${getLink('SocialMedia')}" class="menu-item ${isActive('social')}">
               <div class="menu-icon" style="background: linear-gradient(135deg, #4facfe, #00f2fe);">📱</div>
               <span>${t.social}</span>
@@ -127,18 +111,6 @@ function renderMobileNav() {
             <a href="${getLink('ContactUs')}" class="menu-item ${isActive('contact')}">
                 <div class="menu-icon" style="background: linear-gradient(135deg, #FF9800, #F44336);">📞</div>
                 <span>${t.contact}</span>
-            </a>
-            <a href="${getLink('Share')}" class="menu-item ${isActive('share')}">
-              <div class="menu-icon" style="background: linear-gradient(135deg, #fa709a, #fee140);">📤</div>
-              <span>${t.share}</span>
-            </a>
-            <a href="${getFileLink('termandprivacy', 'privacy.html')}" class="menu-item ${isActive('privacy')}">
-              <div class="menu-icon" style="background: linear-gradient(135deg, #667eea, #764ba2);">🔒</div>
-              <span>${t.privacy}</span>
-            </a>
-            <a href="${getFileLink('termandprivacy', 'terms.html')}" class="menu-item ${isActive('terms')}">
-              <div class="menu-icon" style="background: linear-gradient(135deg, #ff9a9e, #fad0c4);">📜</div>
-              <span>${t.terms}</span>
             </a>
           </div>
         </div>

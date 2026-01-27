@@ -19,8 +19,20 @@ function showInstallPromotion() {
     // Check if banner already exists
     if (document.getElementById('pwaBanner')) return;
 
-    // Check if user has dismissed it recently
-    if (localStorage.getItem('pwaDismissed')) return;
+    // Check if user has dismissed it recently (within 1 hour)
+    const dismissedTime = localStorage.getItem('pwaDismissedTime');
+    if (dismissedTime) {
+        const hoursSinceDismissed = (Date.now() - parseInt(dismissedTime)) / (1000 * 60 * 60);
+        if (hoursSinceDismissed < 1) {
+            const minutesRemaining = Math.ceil((1 - hoursSinceDismissed) * 60);
+            console.log(`PWA banner dismissed ${Math.floor(hoursSinceDismissed * 60)} minutes ago. Will show again in ${minutesRemaining} minutes.`);
+            return;
+        } else {
+            // Clear old dismissal
+            localStorage.removeItem('pwaDismissedTime');
+            localStorage.removeItem('pwaDismissed'); // Remove legacy flag too
+        }
+    }
 
     // Use translations if available
     const t = (window.translations && window.translations.kds && window.translations.kds.pwa) ? window.translations.kds.pwa : {
@@ -72,7 +84,8 @@ window.dismissPWA = function() {
     const banner = document.getElementById('pwaBanner');
     if(banner) {
         banner.style.display = 'none';
-        // Save to localStorage so we don't annoy the user immediately again
-        localStorage.setItem('pwaDismissed', 'true');
+        // Save timestamp so banner shows again after 1 hour
+        localStorage.setItem('pwaDismissedTime', Date.now().toString());
+        console.log('PWA banner dismissed. Will show again in 1 hour.');
     }
 };

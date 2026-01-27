@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PWA Banner Reset</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+            text-align: center;
+            max-width: 500px;
+        }
+        h1 {
+            color: #333;
+            margin-top: 0;
+        }
+        .status {
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 8px;
+            font-size: 14px;
+        }
+        .info {
+            background: #d1ecf1;
+            color: #0c5460;
+            border: 1px solid #bee5eb;
+        }
+        .success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        button {
+            background: #f84269;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            margin: 10px;
+            transition: all 0.3s;
+        }
+        button:hover {
+            background: #e63456;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(248, 66, 105, 0.4);
+        }
+        .secondary {
+            background: #6c757d;
+        }
+        .secondary:hover {
+            background: #5a6268;
+        }
+        code {
+            background: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔧 PWA Banner Reset</h1>
+        
+        <div id="status" class="status info">
+            Checking dismissal status...
+        </div>
+
+        <button onclick="resetBanner()">🔄 Reset PWA Banner</button>
+        <button onclick="goHome()" class="secondary">🏠 Go to Home Page</button>
+
+        <div style="margin-top: 30px; padding-top: 20px; border-top: 2px solid #eee;">
+            <h3>How it works:</h3>
+            <p style="text-align: left; color: #666; font-size: 14px;">
+                • When you dismiss the PWA banner, it won't show again for <strong>1 hour</strong><br>
+                • This button clears that dismissal<br>
+                • After clearing, reload the page and <strong>interact</strong> (click/scroll)<br>
+                • The banner should appear within 2-3 seconds
+            </p>
+        </div>
+    </div>
+
+    <script>
+        function checkStatus() {
+            const statusDiv = document.getElementById('status');
+            const dismissedTime = localStorage.getItem('pwaDismissedTime');
+            const oldFlag = localStorage.getItem('pwaDismissed');
+            
+            if (dismissedTime) {
+                const hoursSince = (Date.now() - parseInt(dismissedTime)) / (1000 * 60 * 60);
+                const minutesSince = Math.floor(hoursSince * 60);
+                const minutesRemaining = Math.ceil((1 - hoursSince) * 60);
+                
+                if (hoursSince < 1) {
+                    statusDiv.className = 'status info';
+                    statusDiv.innerHTML = `
+                        ⏳ <strong>Banner is dismissed</strong><br>
+                        Dismissed ${minutesSince} minute(s) ago<br>
+                        Will show again in ${minutesRemaining} minute(s)
+                    `;
+                } else {
+                    statusDiv.className = 'status success';
+                    statusDiv.innerHTML = '✅ Dismissal expired - banner will show on next visit!';
+                }
+            } else if (oldFlag) {
+                statusDiv.className = 'status info';
+                statusDiv.innerHTML = '⚠️ Old dismissal flag found (permanent block)';
+            } else {
+                statusDiv.className = 'status success';
+                statusDiv.innerHTML = '✅ No dismissal found - banner should show!';
+            }
+        }
+
+        function resetBanner() {
+            // Remove both old and new dismissal flags
+            localStorage.removeItem('pwaDismissedTime');
+            localStorage.removeItem('pwaDismissed');
+            
+            const statusDiv = document.getElementById('status');
+            statusDiv.className = 'status success';
+            statusDiv.innerHTML = '✅ <strong>Banner reset successful!</strong><br>Go to home page and interact with it to see the banner.';
+            
+            console.log('PWA banner dismissal cleared');
+        }
+
+        function goHome() {
+            window.location.href = '../index.html';
+        }
+
+        // Check status on load
+        checkStatus();
+    </script>
+</body>
+</html>
