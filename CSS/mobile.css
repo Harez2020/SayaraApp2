@@ -767,6 +767,11 @@ textarea {
     padding: 10px 15px;
   }
   
+  /* Add spacing for the fixed header so the slider isn't hidden */
+  .slider-container {
+      margin-top: 90px !important;
+  }
+  
   .hamburger {
     display: flex;
   }

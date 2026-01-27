@@ -80,7 +80,7 @@ function generateCardHTML(item) {
          data-location="${normalizeForSearch(item.location)}" 
          data-vehicle="${normalizeForSearch(item.vehicleTypes)}">
         <div class="logo">
-            <img src="${imageSrc}" alt="${item.title}" onerror="this.src='../Delivery/img/CardlogoPlaceHolder.svg'">
+            <img src="${imageSrc}" alt="${item.title}" onerror="this.src='../img/CardlogoPlaceHolder.svg'">
         </div>
         <div class="text">
             <h2 class="title"><span class="text-highlight">${item.title}</span></h2>
@@ -96,7 +96,7 @@ function generateCardHTML(item) {
         <div class="phone action-buttons">
             ${phoneButtons}
             <a class="whatsUp" href="${waHref}" target="_blank" rel="noopener noreferrer" ${waStyle}>
-                <img src="../Delivery/img/phone.svg" alt="واتساب">
+                <img src="../img/phone.svg" alt="واتساب">
                 <span class="wa-text">واتساب</span>
             </a>
         </div>
@@ -152,8 +152,8 @@ function hideUnnecessaryReadMore() {
     });
 }
 
-// Track active service type (default to 'parts')
-let currentServiceType = 'parts';
+// Track active service type (default to 'all')
+let currentServiceType = 'all';
 // Track active brand (default to 'all')
 let currentBrand = 'all';
 
@@ -234,12 +234,13 @@ const synonymMap = {
     'edge': ['edge', 'ئێج'],
     
     // Locations
-    'hawler': ['hawler', 'erbil', 'هەولێر', 'اربیل'],
-    'slemani': ['slemani', 'sulaymaniyah', 'سلێمانی', 'سلیمانی'],
+    'hawler': ['hawler', 'erbil', 'irbil', 'arbil', 'هەولێر', 'اربیل', 'hewler'],
+    'slemani': ['slemani', 'sulaymaniyah', 'sulaimanyah', 'sulaimani', 'sulaymani', 'silemani', 'سلێمانی', 'سلیمانی', 'سلێمانی'],
     'baghdad': ['baghdad', 'بەغداد', 'بغداد'],
-    'duhok': ['duhok', 'دهۆک'],
-    'kirkuk': ['kirkuk', 'کەرکوک'],
-    'halabja': ['halabja', 'هەڵەبجە']
+    'duhok': ['duhok', 'dihok', 'دهۆک', 'دهوك'],
+    'kirkuk': ['kirkuk', 'kerkuk', 'کەرکوک', 'كركوك'],
+    'halabja': ['halabja', 'halabje', 'هەڵەبجە'],
+    'online': ['online', 'ئۆنلاین', 'اونلاين']
 };
 
 function getSearchTerms(input) {

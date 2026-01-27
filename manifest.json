@@ -2,6 +2,7 @@
   "name": "SayaraApp Delivery Services",
   "short_name": "SayaraApp",
   "description": "Mobile car services and delivery in Kurdistan.",
+  "id": "/",
   "start_url": ".",
   "scope": ".",
   "display": "standalone",

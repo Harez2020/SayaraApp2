@@ -7,20 +7,20 @@
     <meta name="description" content="فۆڕمی داواکردنی پارچە بۆ ئۆتۆمبێل" />
     
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="icon" type="image/png" href="../Delivery/img/sayaralogo192.png">
+    <link rel="icon" type="image/png" href="../img/sayaralogo192.png">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic&family=Noto+Sans+Arabic&family=Poppins&display=swap" rel="stylesheet" />
     
-    <link rel="stylesheet" href="../Delivery/style.css" />
-    <link rel="stylesheet" href="../Delivery/mobile.css" media="(max-width: 768px)" />
+    <link rel="stylesheet" href="../CSS/style.css" />
+    <link rel="stylesheet" href="../CSS/mobile.css" media="(max-width: 768px)" />
 </head>
 <body>
     <!-- Navigation -->
     <div class="nav-overlay" onclick="toggleMenu()"></div>
     <nav class="main-nav">
         <div class="nav-container">
-            <a href="../Delivery/" class="nav-logo">
-                <img src="../Delivery/img/sayaralogo192.png" alt="SayaraApp">
+            <a href="../" class="nav-logo">
+                <img src="../img/sayaralogo192.png" alt="SayaraApp">
                 <span>سەیارە ئەپ</span>
             </a>
 
@@ -31,9 +31,9 @@
             </button>
 
             <ul class="nav-links">
-                <li><a href="../Delivery/">خزمەتگوزاری</a></li>
+                <li><a href="../">خزمەتگوزاری</a></li>
                 <li><a href="../Supplier/">پارچەفرۆش</a></li>
-                <li><a href="../Form/" class="active">داواکردنی پارچە</a></li>
+                <li><a href="./" class="active">داواکردنی پارچە</a></li>
                 <li><a href="../AboutUs/">دەربارەی ئێمە</a></li>
                 <li><a href="../SocialMedia/">سۆشیاڵ میدیا</a></li>
                 <li><a href="../ContactUs/">پەیوەندی</a></li>
@@ -44,25 +44,19 @@
         </div>
     </nav>
     <!-- Load navigation JS immediately so toggleMenu is available -->
-    <script src="../Delivery/translations.js"></script>
-    <script src="../Delivery/PWA.js"></script>
-    <script src="../Delivery/Navigation.js"></script>
+    <script src="../JS/translations.js"></script>
+    <script src="../JS/PWA.js"></script>
+    <script src="../JS/Navigation.js"></script>
 
     <section class="cards">
-        <h1>داواکردنی پارچە</h1>
-        
         <div class="form-container">
-            <h2 class="form-title">داواکردنی پارچە لە دەرەوەی عێراق</h2>
-            <p class="form-subtitle">ئەم فۆڕمە پڕکەرەوە</p>
-            
-            <p class="required-note">* هەموو ئەو خانانەی کە بە * نیشانە کراون پێویستن و دەبێت پڕکرێنەوە</p>
-            
+            <h1>داواکردنی پارچە</h1>
             <form id="partRequestForm">
                 <div class="form-group">
-                    <label>* ژمارەی تەلەفۆن (واتساب یان تەلەگرام)</label>
-                    <input type="tel" placeholder="0750-111-2233" required />
+                    <label>* ژماردەی مۆبایل</label>
+                    <input type="tel" placeholder="07xxxxxxxxx" required />
                 </div>
-                
+
                 <div class="form-group">
                     <label>* ناوی پارچەکە بنووسە</label>
                     <input type="text" placeholder="ناوی پارچە" required />
@@ -98,7 +92,7 @@
                     </label>
                 </div>
                 
-                <button type="submit" class="submit-btn">ناردنی داواکاری</button>
+                <button type="submit" class="submit-btn" id="submitBtn">ناردنی داواکاری</button>
             </form>
         </div>
     </section>

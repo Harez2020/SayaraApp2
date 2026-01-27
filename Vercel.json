@@ -9,6 +9,12 @@
       ]
     },
     {
+      "source": "/(img|CSS|JS)/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+      ]
+    },
+    {
       "source": "/(sw.js|manifest.json)",
       "headers": [
         { "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" }
@@ -17,16 +23,20 @@
   ],
   "rewrites": [
     {
-      "source": "/",
-      "destination": "/Delivery/index.html"
+      "source": "/delivery",
+      "destination": "/index.html"
     },
     {
       "source": "/DeliveryServices",
-      "destination": "/Delivery/index.html"
+      "destination": "/index.html"
     },
     {
-      "source": "/(style.css|mobile.css|mobile_utf8.css|services.js|slider.js|translations.js|Navigation.js|PWA.js|sw.js|services.json|manifest.json)",
-      "destination": "/Delivery/$1"
+      "source": "/Delivery/(.*)",
+      "destination": "/$1"
+    },
+    {
+      "source": "/Delivery/img/(.*)",
+      "destination": "/img/$1"
     },
     {
       "source": "/img/(.*)",

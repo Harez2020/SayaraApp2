@@ -30,11 +30,12 @@
       <meta name="mobile-web-app-capable" content="yes" />
       <meta name="apple-mobile-web-app-status-bar-style" content="default" />
       <meta name="apple-mobile-web-app-title" content="SayaraApp" />
-      <link rel="apple-touch-icon" href="img/logo-192.png" />
+      <link rel="apple-touch-icon" href="img/sayaralogo192.png" />
 
       <!-- External CSS -->
-      <link rel="stylesheet" href="style.css" />
-      <link rel="stylesheet" href="mobile.css" media="(max-width: 768px)" />
+      <!-- External CSS -->
+      <link rel="stylesheet" href="CSS/style.css" />
+      <link rel="stylesheet" href="CSS/mobile.css" media="(max-width: 768px)" />
 
       <script>
         // CSP diagnostic: logs Content Security Policy violations so we can find the offender
@@ -59,6 +60,15 @@
       </script>
     </head>
     <body>
+      <!-- Splash Screen -->
+      <div id="splash-screen">
+          <div class="splash-content">
+              <img src="img/sayaralogo192.png" alt="SayaraApp Logo" class="splash-logo">
+              <h1 class="splash-title">سەیارە ئەپ</h1>
+              <div class="splash-loader"></div>
+          </div>
+      </div>
+
       <!-- Navigation -->
       <div class="nav-overlay" onclick="toggleMenu()"></div>
       <nav class="main-nav">
@@ -76,21 +86,23 @@
 
               <ul class="nav-links">
                   <li><a href="./" class="active">خزمەتگوزاری</a></li>
-                  <li><a href="../Supplier/">پارچەفرۆش</a></li>
-                  <li><a href="../Form/">داواکردنی پارچە</a></li>
-                  <li><a href="../AboutUs/">دەربارەی ئێمە</a></li>
-                  <li><a href="../SocialMedia/">سۆشیاڵ میدیا</a></li>
-                  <li><a href="../ContactUs/">پەیوەندی</a></li>
-                  <li><a href="../Share/">هاوبەشی بکە</a></li>
-                  <li><a href="../termandprivacy/privacy.html">سیاسەتی پاراستنی نهێنی</a></li>
-                  <li><a href="../termandprivacy/terms.html">مەرج و ڕێنماییەکان</a></li>
+                  <li><a href="./Supplier/">پارچەفرۆش</a></li>
+                  <li><a href="./Form/">داواکردنی پارچە</a></li>
+                  <li><a href="./AboutUs/">دەربارەی ئێمە</a></li>
+                  <li><a href="./SocialMedia/">سۆشیاڵ میدیا</a></li>
+                  <li><a href="./ContactUs/">پەیوەندی</a></li>
+                  <li><a href="./Share/">هاوبەشی بکە</a></li>
+                  <li><a href="./termandprivacy/privacy.html">سیاسەتی پاراستنی نهێنی</a></li>
+                  <li><a href="./termandprivacy/terms.html">مەرج و ڕێنماییەکان</a></li>
               </ul>
           </div>
       </nav>
       <!-- Load navigation JS immediately so toggleMenu is available -->
-      <script src="translations.js"></script>
-      <script src="PWA.js"></script>
-      <script src="Navigation.js"></script>
+      <!-- Load navigation JS immediately so toggleMenu is available -->
+    <script src="JS/translations.js"></script>
+    <script src="JS/PWA.js"></script>
+    <script src="JS/Navigation.js"></script>
+    <script src="JS/Splash.js"></script>
 
       <section class="cards">
         
@@ -123,6 +135,11 @@
             <button class="branch-btn" data-target="hybrid" onclick="selectBranch('hybrid')">
                 <span class="icon">🏪</span> هایبرید
             </button>
+        </div>
+
+        <!-- Search Input -->
+        <div class="search-box-container" style="max-width: 800px; margin: 0 auto 20px; width: 90%;">
+            <input type="text" id="searchInput" placeholder="ناوی مارکە بنووسە یان بگەڕێ" oninput="filterCards()" style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ddd; font-family: inherit; font-size: 1rem;">
         </div>
 
         <!-- Filter Toggle Button (Mobile) -->
@@ -173,8 +190,9 @@
       </section>
 
       <!-- External JavaScript files -->
-    <script src="slider.js"></script>
-  <script src="services.js"></script>
+      <!-- External JavaScript files -->
+    <script src="JS/slider.js"></script>
+  <script src="JS/services.js"></script>
       <script>
         // Load cards when page loads
         document.addEventListener("DOMContentLoaded", function () {

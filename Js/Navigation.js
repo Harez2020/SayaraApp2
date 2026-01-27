@@ -67,13 +67,33 @@ function renderMobileNav() {
       terms: "مەرجەکان"
     };
 
-    const navHTML = `
+    // Determine prefix based on current depth
+    // If we are at root (index.html or /), prefix is ./
+    // If we are in a subfolder (Supplier/, AboutUs/, etc.), prefix is ../
+    
+    // Simple heuristic: if we match one of the known subfolders, we are deep.
+    // Otherwise we are at root.
+    const knownSubfolders = ['Supplier', 'Form', 'SocialMedia', 'AboutUs', 'ContactUs', 'Share', 'termandprivacy'];
+    const isSubfolder = knownSubfolders.some(folder => path.includes(folder));
+    
+    const rootPrefix = isSubfolder ? '../' : './';
+    
+    // Home link
+    const homeLink = rootPrefix; // goes to ./ or ../ (which is root)
+    
+    // Other links need to append folder name
+    // e.g. from root: ./Supplier/
+    // e.g. from sub: ../Supplier/
+    const getLink = (folder) => `${rootPrefix}${folder}/`;
+    const getFileLink = (folder, file) => `${rootPrefix}${folder}/${file}`;
+
+     const navHTML = `
       <nav class="bottom-nav">
-        <a href="../Delivery/" class="nav-item ${isActive('home')}">
+        <a href="${homeLink}" class="nav-item ${isActive('home')}">
           <svg viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
           <span>${t.home}</span>
         </a>
-        <a href="../Supplier/" class="nav-item ${isActive('supplier')}">
+        <a href="${getLink('Supplier')}" class="nav-item ${isActive('supplier')}">
           <svg viewBox="0 0 24 24"><path d="M18.36 9l.6 3H5.04l.6-3h12.72M20 4H4v2h16V4zm0 3H4l-1 5v2h1v6h10v-6h4v6h2v-6h1V8l-1-1zm-7 13H5v-6h6v6z"/></svg>
           <span>${t.supplier}</span>
         </a>
@@ -92,31 +112,31 @@ function renderMobileNav() {
             <button class="close-menu-btn" onclick="toggleMoreMenu()">×</button>
           </div>
           <div class="menu-grid">
-            <a href="../Form/" class="menu-item ${isActive('form')}">
+            <a href="${getLink('Form')}" class="menu-item ${isActive('form')}">
               <div class="menu-icon" style="background: linear-gradient(135deg, #f84269, #ff6b8a);">📝</div>
               <span>${t.form}</span>
             </a>
-            <a href="../SocialMedia/" class="menu-item ${isActive('social')}">
+            <a href="${getLink('SocialMedia')}" class="menu-item ${isActive('social')}">
               <div class="menu-icon" style="background: linear-gradient(135deg, #4facfe, #00f2fe);">📱</div>
               <span>${t.social}</span>
             </a>
-            <a href="../AboutUs/" class="menu-item ${isActive('about')}">
+            <a href="${getLink('AboutUs')}" class="menu-item ${isActive('about')}">
               <div class="menu-icon" style="background: linear-gradient(135deg, #43e97b, #38f9d7);">ℹ️</div>
               <span>${t.about}</span>
             </a>
-            <a href="../ContactUs/" class="menu-item ${isActive('contact')}">
+            <a href="${getLink('ContactUs')}" class="menu-item ${isActive('contact')}">
                 <div class="menu-icon" style="background: linear-gradient(135deg, #FF9800, #F44336);">📞</div>
                 <span>${t.contact}</span>
             </a>
-            <a href="../Share/" class="menu-item ${isActive('share')}">
+            <a href="${getLink('Share')}" class="menu-item ${isActive('share')}">
               <div class="menu-icon" style="background: linear-gradient(135deg, #fa709a, #fee140);">📤</div>
               <span>${t.share}</span>
             </a>
-            <a href="../termandprivacy/privacy.html" class="menu-item ${isActive('privacy')}">
+            <a href="${getFileLink('termandprivacy', 'privacy.html')}" class="menu-item ${isActive('privacy')}">
               <div class="menu-icon" style="background: linear-gradient(135deg, #667eea, #764ba2);">🔒</div>
               <span>${t.privacy}</span>
             </a>
-            <a href="../termandprivacy/terms.html" class="menu-item ${isActive('terms')}">
+            <a href="${getFileLink('termandprivacy', 'terms.html')}" class="menu-item ${isActive('terms')}">
               <div class="menu-icon" style="background: linear-gradient(135deg, #ff9a9e, #fad0c4);">📜</div>
               <span>${t.terms}</span>
             </a>

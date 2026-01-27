@@ -1,44 +1,45 @@
-const CACHE_NAME = 'sayara-app-v11';
+const CACHE_NAME = 'sayara-app-v14';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
-  './services.js',
-  './slider.js',
-  './translations.js',
-  './Navigation.js',
-  './PWA.js',
+  './JS/services.js',
+  './JS/slider.js',
+  './JS/translations.js',
+  './JS/Navigation.js',
+  './JS/PWA.js',
   './services.json',
-  './style.css',
-  './mobile.css',
+  './CSS/style.css',
+  './CSS/mobile.css',
   './img/CardlogoPlaceHolder.svg',
   './img/phone.svg',
   './img/sayaralogo192.png',
   './img/sayaralogo512.png',
-  '../Supplier/index.html',
-  '../Supplier/suppliers.json',
-  '../Supplier/suppliers.js',
-  '../Supplier/img/nissan.png',
-  '../Supplier/img/toyota.png',
-  '../Supplier/img/kia.png',
-  '../Supplier/img/chevrolet.png',
-  '../Supplier/img/ford.png',
-  '../Supplier/img/mercedes.png',
-  '../Supplier/img/jeep.png',
-  '../Supplier/img/car-parts.png',
-  '../Supplier/img/car-repairs.png',
-  '../Supplier/img/iraq.png',
-  '../Form/index.html',
-  '../AboutUs/index.html',
-  '../SocialMedia/index.html',
-  '../Share/index.html',
-  '../ContactUs/index.html',
-  '../termandprivacy/terms.html',
-  '../termandprivacy/privacy.html',
-  '../termandprivacy/script.js',
-  '../termandprivacy/content.json'
+  './Supplier/index.html',
+  './Supplier/suppliers.json',
+  './JS/suppliers.js',
+  './Supplier/img/nissan.png',
+  './Supplier/img/toyota.png',
+  './Supplier/img/kia.png',
+  './Supplier/img/chevrolet.png',
+  './Supplier/img/ford.png',
+  './Supplier/img/mercedes.png',
+  './Supplier/img/jeep.png',
+  './Supplier/img/car-parts.png',
+  './Supplier/img/car-repairs.png',
+  './Supplier/img/iraq.png',
+  './Form/index.html',
+  './AboutUs/index.html',
+  './SocialMedia/index.html',
+  './Share/index.html',
+  './ContactUs/index.html',
+  './termandprivacy/terms.html',
+  './termandprivacy/privacy.html',
+  './termandprivacy/script.js',
+  './termandprivacy/content.json'
 ];
 
 self.addEventListener('install', (event) => {
+  self.skipWaiting();
   event.waitUntil(
     caches.open(CACHE_NAME).then((cache) => {
       return cache.addAll(ASSETS_TO_CACHE);
@@ -47,6 +48,11 @@ self.addEventListener('install', (event) => {
 });
 
 self.addEventListener('fetch', (event) => {
+  // Ignore non-http/https requests (like chrome-extension://)
+  if (!event.request.url.startsWith('http')) {
+    return;
+  }
+
   // HTML pages: Network First, fall back to cache
   if (event.request.mode === 'navigate' || event.request.headers.get('accept').includes('text/html')) {
     event.respondWith(
@@ -59,7 +65,7 @@ self.addEventListener('fetch', (event) => {
         })
         .catch(() => {
           return caches.match(event.request).then((cachedResponse) => {
-             // Fallback to offline.html if you had one, or just the cached index
+             // Fallback to cached index or nothing
              return cachedResponse || caches.match('./index.html');
           });
         })
@@ -90,7 +96,7 @@ self.addEventListener('activate', (event) => {
             return caches.delete(cacheName);
           }
         })
-      );
+      ).then(() => self.clients.claim());
     })
   );
 });

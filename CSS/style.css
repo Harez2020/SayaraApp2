@@ -2022,3 +2022,435 @@ option {
     max-width: 1200px; /* Cap width for very large screens */
   }
 }
+/* ============================================
+   TERMS AND PRIVACY PAGE STYLES
+   ============================================ */
+.page-container {
+  background: #fff;
+  padding: 40px;
+  margin: 30px auto;
+  width: 90%;
+  max-width: 900px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.page-content {
+  line-height: 1.8;
+  color: #444;
+  font-size: 1.05rem;
+}
+
+.page-content h3 {
+  color: var(--primary);
+  margin-top: 25px;
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+}
+
+.page-content ul {
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.page-content li {
+  margin-bottom: 8px;
+}
+
+/* Specific h1 override for text pages if needed, 
+   but global h1 is also fine. 
+   Restoring the specific border look inside page-container */
+.page-container h1 {
+  border-bottom: 2px solid #eee;
+  padding-bottom: 15px;
+  margin-bottom: 25px;
+  /* Resetting some global h1 styles if they conflict, 
+     but keeping the nice global container look is usually better.
+     Let's keep it additive or just let global h1 rule. 
+     The original had specific border-bottom. */
+  box-shadow: none; /* simple look */
+  text-align: right; /* text pages usually read better right-aligned in RTL */
+  background: transparent;
+  width: 100%;
+}
+
+.page-content strong {
+  font-weight: bold;
+  color: var(--primary);
+}
+/* ============================================
+   SOCIAL MEDIA PAGE STYLES (PREMIUM REDESIGN)
+   ============================================ */
+.social-container {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 24px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.social-title {
+  color: var(--primary);
+  margin-bottom: 30px;
+  font-size: 1.6rem;
+  font-weight: 800;
+  text-shadow: 0 2px 4px rgba(248, 66, 105, 0.1);
+}
+
+.social-links {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  padding: 14px 24px;
+  border-radius: 18px;
+  text-decoration: none;
+  color: white;
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  font-weight: bold;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.social-link:hover {
+  transform: scale(1.03) translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+  z-index: 10;
+}
+
+.social-link:active {
+  transform: scale(0.98);
+}
+
+/* Glassy shimmer effect on hover */
+.social-link::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transform: skewX(-20deg);
+  transition: 0.5s;
+}
+
+.social-link:hover::after {
+  left: 150%;
+  transition: 0.7s ease-in-out;
+}
+
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  margin-left: 20px;
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 50%;
+  backdrop-filter: blur(4px);
+  box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+.social-icon svg {
+  width: 26px;
+  height: 26px;
+  fill: currentColor;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+}
+
+.social-text-content {
+  text-align: right;
+  flex: 1;
+}
+
+.social-name {
+  font-size: 1.25rem;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.social-handle {
+  font-size: 0.95rem;
+  color: #ffffff; /* Explicit white */
+  opacity: 1; /* Remove transparency */
+  font-weight: 700; /* Make it thick */
+  margin-top: 4px;
+  font-family: var(--font-poppins);
+  letter-spacing: 0.03em;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.3); /* Pop from background */
+  text-transform: lowercase;
+}
+
+/* 
+   Vibrant Gradients 
+   Using modern, rich gradients with depth
+*/
+.facebook { 
+  background: linear-gradient(135deg, #1877f2 0%, #0d5cb9 100%); 
+}
+.instagram { 
+  background: linear-gradient(135deg, #f9ce34 0%, #ee2a7b 50%, #6228d7 100%); 
+}
+.x-twitter { 
+  background: linear-gradient(135deg, #2a2a2a 0%, #000000 100%); 
+}
+.youtube { 
+  background: linear-gradient(135deg, #ff0000 0%, #c40202 100%); 
+}
+.linkedin { 
+  background: linear-gradient(135deg, #0077b5 0%, #004d75 100%); 
+}
+.whatsapp { 
+  background: linear-gradient(135deg, #25d366 0%, #179148 100%); 
+}
+.telegram { 
+  background: linear-gradient(135deg, #2AABEE 0%, #229ED9 100%); 
+}
+.snapchat { 
+  background: linear-gradient(135deg, #FFFC00 0%, #FDBD00 100%); 
+  color: #000 !important; 
+}
+/* Ensure text on bright backgrounds (like Snapchat) is readable */
+.snapchat .social-handle, .snapchat .social-name {
+    color: #000 !important;
+    text-shadow: none; /* No shadow needed for black text on yellow */
+}
+.snapchat .social-icon { 
+  background: rgba(0, 0, 0, 0.08); 
+  color: #000;
+}
+.tiktok { 
+  background: linear-gradient(135deg, #000000 0%, #1e1e1e 100%);
+  position: relative;
+  overflow: hidden;
+}
+/* Subtle accent for tiktok */
+.tiktok::before {
+   content: '';
+   position: absolute;
+   top: 0; left: 0; right: 0; bottom: 0;
+   background: linear-gradient(45deg, rgba(37,244,238,0.2) 0%, transparent 50%, rgba(254,44,85,0.2) 100%);
+   pointer-events: none;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+  .social-container {
+    width: 95%;
+    padding: 20px;
+    margin: 20px auto;
+  }
+  .social-link {
+    padding: 12px 18px;
+  }
+  .social-name {
+    font-size: 1.1rem;
+  }
+}
+/* ============================================
+   ORDER FORM STYLES
+   ============================================ */
+.form-container {
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 30px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  direction: rtl; /* Ensure RTL layout */
+}
+
+.form-container h1 {
+  text-align: center;
+  color: var(--primary);
+  margin-bottom: 30px;
+  font-size: 1.8rem;
+  background: none;
+  box-shadow: none;
+  padding: 0;
+  width: auto;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  text-align: right;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: var(--color-text);
+}
+
+.form-group input[type="text"],
+.form-group select {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  font-family: inherit;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+.form-group input[type="text"]:focus,
+.form-group select:focus {
+  border-color: var(--primary);
+  outline: none;
+}
+
+/* Upload Area Styling */
+.upload-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 2px dashed #ccc;
+  border-radius: 12px;
+  padding: 30px;
+  cursor: pointer;
+  transition: all 0.3s;
+  background-color: #fafafa;
+  text-align: center;
+}
+
+.upload-area:hover {
+  background-color: #fff0f3;
+  border-color: var(--primary);
+}
+
+.upload-icon {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.upload-area p {
+  margin: 5px 0;
+  font-weight: bold;
+  color: #555;
+}
+
+.upload-area small {
+  color: #888;
+}
+
+/* Submit Button */
+.submit-btn {
+  width: 100%;
+  padding: 15px;
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  margin-top: 10px;
+}
+
+.submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(248, 66, 105, 0.4);
+}
+
+.submit-btn:active {
+  transform: scale(0.98);
+}
+
+/* ============================================
+   SPLASH SCREEN STYLES
+   ============================================ */
+#splash-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 0.5s ease-out, visibility 0.5s;
+}
+
+#splash-screen.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.splash-content {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.splash-logo {
+  width: 120px;
+  height: 120px;
+  border-radius: 24px;
+  box-shadow: 0 10px 30px rgba(248, 66, 105, 0.2);
+  animation: float 3s ease-in-out infinite;
+}
+
+.splash-title {
+  font-size: 2rem;
+  color: var(--primary);
+  margin: 0;
+  background: none;
+  box-shadow: none;
+  padding: 0;
+  opacity: 0;
+  animation: fadeInUp 0.8s ease-out forwards 0.3s;
+}
+
+.splash-loader {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid var(--primary);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-top: 10px;
+}
+
+/* Animations */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

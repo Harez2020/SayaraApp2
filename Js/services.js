@@ -259,6 +259,44 @@ function toggleDescriptionV2(element) {
     }
 }
 
+// Synonym map for smarter search (Kurdish/Arabic <-> English/Common terms) - Consistent with suppliers.js
+const synonymMap = {
+    // Locations
+    'hawler': ['hawler', 'erbil', 'irbil', 'arbil', 'هەولێر', 'اربیل', 'hewler'],
+    'slemani': ['slemani', 'sulaymaniyah', 'sulaimanyah', 'sulaimani', 'sulaymani', 'silemani', 'سلێمانی', 'سلیمانی', 'سلێمانی'],
+    'baghdad': ['baghdad', 'بەغداد', 'بغداد'],
+    'duhok': ['duhok', 'dihok', 'دهۆک', 'دهوك'],
+    'kirkuk': ['kirkuk', 'kerkuk', 'کەرکوک', 'كركوك'],
+    'halabja': ['halabja', 'halabje', 'هەڵەبجە'],
+    
+    // Services
+    'mechanic': ['mechanic', 'فیتەر', 'فیتەری', 'میکانیك', 'میکانیک'],
+    'car_wash': ['car wash', 'غەسل', 'شۆردن', 'غسل', 'شستن'],
+    'fuel_pump': ['fuel', 'pump', 'فیت پەمپ', 'پەمپ'],
+    'tire': ['tire', 'وایەرمەن', 'لاتە'],
+    'transport': ['transport', 'فلات', 'کرێن', 'بارکردن', 'گواستنەوە'],
+    'locksmith': ['locksmith', 'کلیل', 'دەرگا', 'قفل']
+};
+
+function getSearchTerms(input) {
+    const normalized = normalizeForSearch(input);
+    if (!normalized) return [];
+
+    let terms = [normalized];
+
+    // Check for synonyms
+    for (const [key, values] of Object.entries(synonymMap)) {
+        // If input matches any of the values (normalized), add the key and all values
+        const match = values.some(v => normalizeForSearch(v) === normalized || normalized.includes(normalizeForSearch(v)));
+        if (match) {
+            terms = [...terms, key, ...values];
+        }
+    }
+    
+    // Deduplicate and normalize all
+    return [...new Set(terms.map(t => normalizeForSearch(t)))];
+}
+
 // Current active branch
 let currentBranch = 'car';
 
@@ -284,12 +322,16 @@ function filterCards() {
     // Get selected values
     const locationFilter = document.getElementById('locationFilter').value;
     const serviceFilter = document.getElementById('serviceFilter').value;
+    const searchInput = document.getElementById('searchInput') ? document.getElementById('searchInput').value : '';
     
     // Get all cards
     const cards = document.querySelectorAll('.card');
     
     // Pre-normalize filters
     const normalizedLocationFilter = normalizeForSearch(locationFilter);
+    
+    // Generate all related search terms (synonyms) from input
+    const searchTerms = getSearchTerms(searchInput);
 
     // map serviceFilter keys to likely keywords (Kurdish/Arabic + english)
     const serviceKeywordsMap = {
@@ -313,7 +355,11 @@ function filterCards() {
 
         // 2. Location filter (use precomputed searchKey)
         if (showCard && locationFilter !== 'all') {
-            if (!search.includes(normalizedLocationFilter)) {
+            // Use synonym matching for location dropdown too
+            const locSynonyms = getSearchTerms(locationFilter);
+            const locMatch = locSynonyms.some(term => search.includes(term));
+            
+            if (!locMatch && !search.includes(normalizedLocationFilter)) {
                 showCard = false;
             }
         }
@@ -323,6 +369,13 @@ function filterCards() {
             const keywords = serviceKeywordsMap[serviceFilter] || [serviceFilter];
             const hasMatch = keywords.some(k => search.includes(normalizeForSearch(k)));
             if (!hasMatch) showCard = false;
+        }
+
+        // 4. Text Search Filter
+        if (showCard && searchInput.trim() !== '') {
+            // Check if ANY of the expanded search terms match the card's content
+            const hit = searchTerms.some(term => search.includes(term));
+            if (!hit) showCard = false;
         }
 
         if (showCard) {

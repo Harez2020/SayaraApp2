@@ -7,20 +7,20 @@
     <meta name="description" content="پارچەفرۆشەکان بۆ ئۆتۆمبێل لە عێراق" />
     
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="icon" type="image/png" href="../Delivery/img/sayaralogo192.png">
+    <link rel="icon" type="image/png" href="../img/sayaralogo192.png">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic&family=Noto+Sans+Arabic&family=Poppins&display=swap" rel="stylesheet" />
     
-    <link rel="stylesheet" href="../Delivery/style.css" />
-    <link rel="stylesheet" href="../Delivery/mobile.css" media="(max-width: 768px)" />
+    <link rel="stylesheet" href="../CSS/style.css" />
+    <link rel="stylesheet" href="../CSS/mobile.css" media="(max-width: 768px)" />
 </head>
 <body>
     <!-- Navigation -->
     <div class="nav-overlay" onclick="toggleMenu()"></div>
     <nav class="main-nav">
         <div class="nav-container">
-            <a href="../Delivery/" class="nav-logo">
-                <img src="../Delivery/img/sayaralogo192.png" alt="SayaraApp">
+            <a href="../" class="nav-logo">
+                <img src="../img/sayaralogo192.png" alt="SayaraApp">
                 <span>سەیارە ئەپ</span>
             </a>
 
@@ -31,7 +31,7 @@
             </button>
 
             <ul class="nav-links">
-                <li><a href="../Delivery/">خزمەتگوزاری</a></li>
+                <li><a href="../">خزمەتگوزاری</a></li>
                 <li><a href="./" class="active">پارچەفرۆش</a></li>
                 <li><a href="../Form/">داواکردنی پارچە</a></li>
                 <li><a href="../AboutUs/">دەربارەی ئێمە</a></li>
@@ -44,9 +44,9 @@
         </div>
     </nav>
     <!-- Load navigation JS immediately so toggleMenu is available -->
-    <script src="../Delivery/translations.js"></script>
-    <script src="../Delivery/PWA.js"></script>
-    <script src="../Delivery/Navigation.js"></script>
+    <script src="../JS/translations.js"></script>
+    <script src="../JS/PWA.js"></script>
+    <script src="../JS/Navigation.js"></script>
 
     <!-- Advertising Slider -->
     <div class="slider-container" id="adSlider">
@@ -74,11 +74,14 @@
                 <h2>پارچەکەت لێرە بدۆزەرەوە</h2>
                                 <!-- Service Type Buttons -->
                     <div class="branch-selector">
-                        <button class="branch-btn active" data-target="parts" onclick="selectBranch('parts')">
+                        <button class="branch-btn active" data-target="all" onclick="selectBranch('all')">
+                            <span class="icon">🔍</span> هەموو
+                        </button>
+                        <button class="branch-btn" data-target="parts" onclick="selectBranch('parts')">
                             <span class="icon">⚙️</span> پارچەی یەدەگ
                         </button>
                         <button class="branch-btn" data-target="repair" onclick="selectBranch('repair')">
-                            <span class="icon">🔧</span> چاککردنەوە
+                            <span class="icon">🔧</span> فیتەر
                         </button>
                         <button class="branch-btn" data-target="scrap" onclick="selectBranch('scrap')">
                             <span class="icon">♻️</span> سکراب
@@ -86,7 +89,7 @@
                     </div>
 
                     <div class="search-box-container">
-                        <input type="text" id="searchInput" placeholder="گەڕان بەپێی بابەت، جۆر، یان شوێن..." oninput="filterCards()" style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ddd; font-family: inherit;">
+                        <input type="text" id="searchInput" placeholder="ناوی مارکە بنووسە یان بگەڕێ" oninput="filterCards()" style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ddd; font-family: inherit;">
                     </div>
                     
                     <!-- Brand Grid Filter -->
@@ -97,53 +100,53 @@
                         
                         <button class="brand-card" data-target="toyota" onclick="selectBrand('toyota')">
                             <img src="img/toyota.png" alt="Toyota">
-                            <span>Toyota</span>
+                            <span>تۆیۆتا</span>
                         </button>
                         <button class="brand-card" data-target="nissan" onclick="selectBrand('nissan')">
                             <img src="img/nissan.png" alt="Nissan">
-                            <span>Nissan</span>
+                            <span>نیسان</span>
                         </button>
                         <button class="brand-card" data-target="hyundai" onclick="selectBrand('hyundai')">
                             <img src="img/hyundai.png" alt="Hyundai">
-                            <span>Hyundai</span>
+                            <span>هیۆندای</span>
                         </button>
                         <button class="brand-card" data-target="kia" onclick="selectBrand('kia')">
                             <img src="img/kia.png" alt="Kia">
-                            <span>Kia</span>
+                            <span>کیا</span>
                         </button>
                         
                         <button class="brand-card" data-target="mercedes" onclick="selectBrand('mercedes')">
                             <img src="img/mercedes.png" alt="Mercedes">
-                            <span>Mercedes</span>
+                            <span>مێرسیدس</span>
                         </button>
                         <button class="brand-card" data-target="bmw" onclick="selectBrand('bmw')">
                             <img src="img/bmw.png" alt="BMW">
-                            <span>BMW</span>
+                            <span>بی ئێم</span>
                         </button>
                         <button class="brand-card" data-target="chevrolet" onclick="selectBrand('chevrolet')">
                             <img src="img/chevrolet.png" alt="Chevrolet">
-                            <span>Chevrolet</span>
+                            <span>شێفرۆڵێت</span>
                         </button>
                         <button class="brand-card" data-target="ford" onclick="selectBrand('ford')">
                             <img src="img/ford.png" alt="Ford">
-                            <span>Ford</span>
+                            <span>فۆرد</span>
                         </button>
 
                         <button class="brand-card" data-target="jeep" onclick="selectBrand('jeep')">
                             <img src="img/jeep.png" alt="Jeep">
-                            <span>Jeep</span>
+                            <span>جیب</span>
                         </button>
                         <button class="brand-card" data-target="mitsubishi" onclick="selectBrand('mitsubishi')">
                             <img src="img/mitsubishy.png" alt="Mitsubishi">
-                            <span>Mitsubishi</span>
+                            <span>میتسوبیشی</span>
                         </button>
                         
                         <!-- Text-only / Placeholders for others -->
                         <button class="brand-card" data-target="mazda" onclick="selectBrand('mazda')">
-                            <span>Mazda</span>
+                            <span>مازدا</span>
                         </button>
                         <button class="brand-card" data-target="opel" onclick="selectBrand('opel')">
-                            <span>Opel</span>
+                            <span>ئۆپڵ</span>
                         </button>
 
                         <!-- Regional -->
@@ -200,8 +203,8 @@
         <div id="cardsContainer"></div>
     </section>
 
-  <script src="../Delivery/slider.js"></script>
-    <script src="suppliers.js"></script>
+  <script src="../JS/slider.js"></script>
+    <script src="../JS/suppliers.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
           loadCards();
