@@ -29,10 +29,15 @@ function showInstallPromotion() {
       installBtn: "دابەزاندن"
     };
     
+    // Determine correct image path based on current page location
+    const currentPath = window.location.pathname;
+    const isRootPage = currentPath === '/' || currentPath.endsWith('/index.html') || !currentPath.includes('/');
+    const imgPath = isRootPage ? 'img/sayaralogo192.png' : '../img/sayaralogo192.png';
+    
     const bannerHTML = `
       <div class="pwa-install-banner" id="pwaBanner">
         <div class="pwa-content">
-          <img src="../Delivery/img/sayaralogo192.png" alt="Icon" class="pwa-icon">
+          <img src="${imgPath}" alt="Icon" class="pwa-icon">
           <div class="pwa-text">
             <h3>${t.installTitle}</h3>
             <p>${t.installDesc}</p>

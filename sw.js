@@ -1,4 +1,4 @@
-const CACHE_NAME = 'sayara-app-v15';
+const CACHE_NAME = 'sayara-app-v16';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
@@ -54,7 +54,8 @@ self.addEventListener('fetch', (event) => {
   }
 
   // HTML pages: Network First, fall back to cache
-  if (event.request.mode === 'navigate' || event.request.headers.get('accept').includes('text/html')) {
+  const acceptHeader = event.request.headers.get('accept');
+  if (event.request.mode === 'navigate' || (acceptHeader && acceptHeader.includes('text/html'))) {
     event.respondWith(
       fetch(event.request)
         .then((networkResponse) => {
