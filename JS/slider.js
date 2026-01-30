@@ -1,22 +1,25 @@
-// ============================================
-// ADS/SLIDER CONFIGURATION
-// ============================================
-// To add/remove slides, just edit this array.
-// image: The URL of the ad image.
-// link: (Optional) URL to open when clicked.
+
 const slidesData = [
     { 
         image: 'https://placehold.co/800x400/121212/f84269?text=Ad+Banner+1',
-        link: '#' 
+        link: 'https://wa.me/9647701455471?text=سڵاو%20من%20لە%20سەیارە%20ئەپەوە%20هاتووم%20و%20پێویستم%20بە%20زانیاری%20زیاتر%20لەسەر%20خزمەتگوزارییەکانتان' 
     },
     { 
         image: 'https://placehold.co/800x400/2a2a2a/4facfe?text=Ad+Banner+2',
-        link: '#' 
+        link: 'https://wa.me/9647701455471?text=سڵاو%20من%20لە%20سەیارە%20ئەپەوە%20هاتووم%20و%20پێویستم%20بە%20زانیاری%20زیاتر%20لەسەر%20خزمەتگوزارییەکانتان' 
     },
     { 
-        image: 'https://placehold.co/800x400/f84269/ffffff?text=Ad+Banner+3',
-        link: '#' 
-    }
+        image: 'https://placehold.co/800x400/f84269/ffffff?text=Ad+Banner+3+Click+Here',
+        link: 'https://wa.me/9647701455471?text=سڵاو%20من%20لە%20سەیارە%20ئەپەوە%20هاتووم%20و%20پێویستم%20بە%20زانیاری%20زیاتر%20لەسەر%20خزمەتگوزارییەکانتان' 
+    },
+    { 
+        image: 'https://placehold.co/800x400/2a2a2a/4facfe?text=Ad+Banner+4',
+        link: 'https://wa.me/9647701455471?text=سڵاو%20من%20لە%20سەیارە%20ئەپەوە%20هاتووم%20و%20پێویستم%20بە%20زانیاری%20زیاتر%20لەسەر%20خزمەتگوزارییەکانتان' 
+    },
+    { 
+        image: 'https://placehold.co/800x400/121212/f84269?text=Ad+Banner+5',
+        link: 'https://wa.me/9647701455471?text=سڵاو%20من%20لە%20سەیارە%20ئەپەوە%20هاتووم%20و%20پێویستم%20بە%20زانیاری%20زیاتر%20لەسەر%20خزمەتگوزارییەکانتان' 
+    },
 ];
 
 // ============================================

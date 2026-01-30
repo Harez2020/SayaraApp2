@@ -274,12 +274,13 @@ h3 {
 }
 
 .hero-filter-box {
-  padding: 25px 20px; /* Increased padding */
+  padding: 25px 2px; /* Increased padding */
   min-width: unset;
-  max-width: 100%;
+  max-width: 320px;
   width: 100%;
   border-radius: 16px; /* rounder corners */
 }
+
 
 .hero-filter-box h2 {
   font-size: 1.1rem;
@@ -630,6 +631,30 @@ textarea {
 /* ============================================
    16. EXTRA SMALL SCREENS (< 360px)
    ============================================ */
+@media (max-width: 380px) {
+  .hero-filter-box {
+    margin: auto;
+    padding: 25px 10px; /* Increased padding */
+    min-width: unset;
+    max-width: 380px;
+    width: 100%;
+    border-radius: 16px; /* rounder corners */
+    
+    font-size: 0.3em;
+  }
+  .branch-btn{
+    display: flex;
+    flex-direction: column;
+    font-size: 0.3em;
+    padding: 2px 1px;
+    gap: 3px;
+  }
+  .brand-card{
+    padding: 2px 1px;
+    font-size: smaller;
+  }
+}
+
 @media (max-width: 500px) {
   .card {
     flex-direction: column;
@@ -658,7 +683,7 @@ textarea {
 
   .branch-btn {
     font-size: 0.65rem;
-    padding: 6px 4px;
+    padding: 3px 2px;
   }
 
   .hero-title {
@@ -672,6 +697,14 @@ textarea {
 
   .social-links {
     grid-template-columns: 1fr;
+  }
+
+  .hero-filter-box {
+    margin: auto;
+    padding: 25px; /* Increased padding */
+    min-width: unset;
+    max-width: 490px;
+    width: 100%;
   }
 }
 
@@ -754,6 +787,13 @@ textarea {
     width: 100%;
     display: flex;
     justify-content: center;
+  }
+  .hero-filter-box {
+    margin: auto;
+    padding: 30px; /* Increased padding */
+    min-width: 490;
+    max-width: 760px;
+    width: 100%;
   }
 }
 

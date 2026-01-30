@@ -773,6 +773,10 @@ hr {
   width: 40px;
   height: 40px;
   border-radius: 8px;
+  z-index: 1005;
+}
+.nav-logo span {
+  z-index: 1005;
 }
 
 .nav-links {
@@ -1278,7 +1282,6 @@ hr {
 }
 
 .hero-filter-box {
-  margin: auto;
   background: linear-gradient(
     135deg,
     rgba(80, 20, 40, 0.25),
@@ -1292,7 +1295,7 @@ hr {
   border-radius: 20px;
   padding: 30px; /* Increased padding */
   min-width: 320px;
-  max-width: 400px;
+  max-width: 600px;
 }
 
 .hero-filter-box h2 {
@@ -1301,6 +1304,7 @@ hr {
   font-size: 1.3rem;
   margin-bottom: 8px; /* increased margin */
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+   
 }
 
 .hero-filter-box .hero-subtitle {
