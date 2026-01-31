@@ -55,17 +55,17 @@
             <form id="contactForm" onsubmit="handleContactSubmit(event)">
                 <div class="form-group" style="text-align: right;">
                     <label>ناو</label>
-                    <input type="text" id="contactName" placeholder="ناوەکەت بنووسە" required />
+                    <input type="text" id="contactName" name="name" placeholder="ناوەکەت بنووسە" required />
                 </div>
 
                 <div class="form-group" style="text-align: right;">
                     <label>ژمارەی تەلەفۆن</label>
-                    <input type="tel" id="contactPhone" placeholder="0750xxxxxxx" required />
+                    <input type="tel" id="contactPhone" name="phone" placeholder="0750xxxxxxx" required />
                 </div>
 
                 <div class="form-group" style="text-align: right;">
                     <label>پەیام / تێبینی</label>
-                    <textarea id="contactFeedback" rows="4" placeholder="پەیامەکەت لێرە بنووسە..." required></textarea>
+                    <textarea id="contactFeedback" name="message" rows="4" placeholder="پەیامەکەت لێرە بنووسە..." required></textarea>
                 </div>
 
                 <div class="form-group" style="text-align: right;">
@@ -77,17 +77,21 @@
                             </svg>
                             واتساپ
                         </button>
-
+                        <button type="button" class="branch-btn" id="btnEmail" onclick="selectMethod('email')">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                            ئیمەیڵ
+                        </button>
                     </div>
                 </div>
-
-                <!-- Hidden Email Field -->
-
 
                 <div style="margin-top: 30px;">
                     <button type="submit" class="submit-btn" id="submitBtn">
                         ناردن بۆ واتساپ 📤
                     </button>
+                    <p id="formStatus" style="text-align: center; margin-top: 10px; display: none;"></p>
                 </div>
             </form>
 
@@ -95,10 +99,21 @@
     </section>
 
     <script>
-        // Default method is always WhatsApp now
-        // let selectedMethod = 'whatsapp'; 
+        let selectedMethod = 'whatsapp';
 
-        // function selectMethod(method) { ... } -> Removed as only WhatsApp exists
+        function selectMethod(method) {
+            selectedMethod = method;
+            
+            // Update UI
+            document.querySelectorAll('.branch-btn').forEach(btn => btn.classList.remove('active'));
+            if (method === 'whatsapp') {
+                document.getElementById('btnWhatsapp').classList.add('active');
+                document.getElementById('submitBtn').innerHTML = 'ناردن بۆ واتساپ 📤';
+            } else {
+                document.getElementById('btnEmail').classList.add('active');
+                document.getElementById('submitBtn').innerHTML = 'ناردن بۆ ئیمەیڵ 📧';
+            }
+        }
 
         function handleContactSubmit(e) {
             e.preventDefault();
@@ -106,12 +121,54 @@
             const name = document.getElementById('contactName').value;
             const phone = document.getElementById('contactPhone').value;
             const feedback = document.getElementById('contactFeedback').value;
+            const submitBtn = document.getElementById('submitBtn');
+            const statusMsg = document.getElementById('formStatus');
             
-            // Always WhatsApp
-            // Determine Greeting based on time (optional, keep simple)
-            const text = `*سڵاو، پەیوەندی نوێ لە ئەپەوە:*\n\n👤 *ناو:* ${name}\n📱 *مۆبایل:* ${phone}\n📝 *پەیام:* ${feedback}`;
-            const encodedText = encodeURIComponent(text);
-            window.open(`https://wa.me/9647701455471?text=${encodedText}`, '_blank');
+            if (selectedMethod === 'whatsapp') {
+                const text = `سڵاو، پەیوەندی نوێ لە ئەپەوە:\n\nناو: ${name}\nمۆبایل: ${phone}\nپەیام: ${feedback}`;
+                const encodedText = encodeURIComponent(text);
+                window.open(`https://wa.me/9647701455471?text=${encodedText}`, '_blank');
+            } else {
+                // Backend send via FormSubmit
+                submitBtn.disabled = true;
+                submitBtn.innerHTML = 'جارێ دەینێرێت... ⏳';
+                statusMsg.style.display = 'none';
+
+                fetch("https://formsubmit.co/ajax/info@sayara.online", {
+                    method: "POST",
+                    headers: { 
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        name: name,
+                        phone: phone,
+                        message: feedback
+                    })
+                })
+                .then(response => response.json())
+                .then(data => {
+                    submitBtn.innerHTML = 'نێردرا ✅';
+                    statusMsg.innerText = 'پەیامەکەت بە سەرکەوتوویی نێردرا!';
+                    statusMsg.style.color = 'green';
+                    statusMsg.style.display = 'block';
+                    document.getElementById('contactForm').reset();
+                    
+                    setTimeout(() => {
+                        submitBtn.disabled = false;
+                        submitBtn.innerHTML = 'ناردن بۆ ئیمەیڵ 📧';
+                        statusMsg.style.display = 'none';
+                    }, 3000);
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    submitBtn.innerHTML = 'هەڵە ڕوویدا ❌';
+                    statusMsg.innerText = 'کێشەیەک هەیە، تکایە دووبارە هەوڵبدەرەوە.';
+                    statusMsg.style.color = 'red';
+                    statusMsg.style.display = 'block';
+                    submitBtn.disabled = false;
+                });
+            }
         }
     </script>
 </body>

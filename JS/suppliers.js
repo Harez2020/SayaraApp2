@@ -276,6 +276,8 @@ function filterCards() {
     // Normalize service type
     const normService = normalizeForSearch(currentServiceType);
 
+    let visibleCount = 0;
+    
     cards.forEach(card => {
         let show = true;
         
@@ -311,9 +313,45 @@ function filterCards() {
             if (!hit) show = false;
         }
 
-        if (show) card.classList.remove('hidden');
+        if (show) {
+            card.classList.remove('hidden');
+            visibleCount++;
+        }
         else card.classList.add('hidden');
     });
+
+    // Handle No Results Message
+    const container = document.getElementById('cardsContainer');
+    let noResultsMsg = document.getElementById('noResultsMsg');
+    
+    if (visibleCount === 0) {
+        if (!noResultsMsg) {
+            noResultsMsg = document.createElement('div');
+            noResultsMsg.id = 'noResultsMsg';
+            noResultsMsg.style.textAlign = 'center';
+            noResultsMsg.style.padding = '50px 20px';
+            noResultsMsg.style.fontSize = '1.4rem';
+            noResultsMsg.style.fontWeight = 'bold';
+            noResultsMsg.style.color = '#555';
+            noResultsMsg.style.backgroundColor = '#f4f4f4';
+            noResultsMsg.style.borderRadius = '12px';
+            noResultsMsg.style.margin = '30px auto';
+            noResultsMsg.style.width = '100%';
+            noResultsMsg.style.maxWidth = '600px';
+            noResultsMsg.style.gridColumn = '1 / -1';
+            noResultsMsg.style.boxShadow = '0 4px 6px rgba(0,0,0,0.05)';
+            noResultsMsg.innerHTML = `
+                <div style="font-size: 3rem; margin-bottom: 15px;">🔍</div>
+                ببوورە، هیچ ئەنجامێک نەدۆزرایەوە
+            `;
+            container.appendChild(noResultsMsg);
+        }
+        noResultsMsg.style.display = 'block';
+    } else {
+        if (noResultsMsg) {
+            noResultsMsg.style.display = 'none';
+        }
+    }
 }
 
 window.loadCards = loadCards;
