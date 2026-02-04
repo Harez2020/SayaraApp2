@@ -52,7 +52,7 @@ function renderMobileNav() {
       moreTitle: "بەشەکانی تر",
       social: "پلاتفۆڕمەکانمان",
       about: "ئێمە کێین",
-      contact: "پەیوەندیبکە"
+      contact: "پەیوەندی بکە"
     };
 
     // Determine prefix based on current depth
