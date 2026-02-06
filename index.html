@@ -26,7 +26,9 @@
 
       <!-- PWA Meta Tags -->
       <link rel="manifest" href="manifest.json" />
-      <meta name="theme-color" content="#f84269" />
+      <meta name="theme-color" content="#f84269" media="(prefers-color-scheme: light)" />
+      <meta name="theme-color" content="#f84269" media="(prefers-color-scheme: dark)" />
+      <meta name="msapplication-TileColor" content="#f84269" />
       <meta name="mobile-web-app-capable" content="yes" />
       <meta name="apple-mobile-web-app-status-bar-style" content="default" />
       <meta name="apple-mobile-web-app-title" content="SayaraApp" />
@@ -78,7 +80,7 @@
                   <span>سەیارە ئەپ</span>
               </a>
 
-              <button class="hamburger" onclick="toggleMenu()">
+              <button class="hamburger" onclick="toggleMenu()" title="فتح القائمة" aria-label="فتح القائمة">
                   <span></span>
                   <span></span>
                   <span></span>
@@ -138,8 +140,8 @@
         </div>
 
         <!-- Search Input -->
-        <div class="search-box-container" style="max-width: 800px; margin: 0 auto 20px; width: 90%;">
-            <input type="text" id="searchInput" placeholder="بگەڕێ بۆ خزمەت وەك ،غەسل یان وایەرمەن " oninput="filterCards()" style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ddd; font-family: inherit; font-size: 1rem;">
+        <div class="search-box-container">
+            <input type="text" id="searchInput" placeholder="بگەڕێ بۆ خزمەت وەك ،غەسل یان وایەرمەن " oninput="filterCards()">
         </div>
 
         <!-- Filter Toggle Button (Mobile) -->
