@@ -173,7 +173,7 @@ function generateCardHTMLv2(service) {
 
     // Prepare WhatsApp link
     const whatsappNumber = service.whatsapp ? String(service.whatsapp).trim() : '';
-    const waText = 'سڵاو، دەمەوێت زانیاری زیاتر وەربگرم دەربارەی خزمەتگوزاریەکەتان';
+    const waText = 'سڵاولە ڕێگەی سەیارە ئەپەوە هاتووم، دەمەوێت زانیاری زیاتر وەربگرم دەربارەی خزمەتگوزاریەکەتان';
     const waHref = whatsappNumber ? `https://wa.me/${encodeURIComponent(whatsappNumber)}?text=${encodeURIComponent(waText)}` : '#';
 
     return `
