@@ -1,17 +1,6 @@
-.hero-filter-box select:focus {
-  /* existing styles */
-}
+/* Original styles for CSS/styles.css */
+/* Add your original styles here */
 
-.search-box-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px;
-}
-
-#searchInput {
-  width: 100%;
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+.search-box {
+    /* Original styles for search box */  
 }
