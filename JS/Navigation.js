@@ -29,7 +29,7 @@ function renderMobileNav() {
     const path = window.location.pathname;
     let activePage = '';
     
-    if (path.includes('/Delivery/') || path.endsWith('SayaraApp/') || path.endsWith('index.html') && !path.includes('Supplier') && !path.includes('SocialMedia') && !path.includes('AboutUs') && !path.includes('ContactUs')) {
+    if (path.includes('/Delivery/') || path.endsWith('SayaraApp2/') || path.endsWith('index.html') && !path.includes('Supplier') && !path.includes('SocialMedia') && !path.includes('AboutUs') && !path.includes('ContactUs')) {
         activePage = 'home';
     } else if (path.includes('/Supplier/')) {
         activePage = 'supplier';
