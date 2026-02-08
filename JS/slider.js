@@ -2,11 +2,11 @@
 const slidesData = [
     {
         image: '/img/SAED-SADIQ-FITTARY-GAROK.jpg',
-        link: 'https://wa.me/9647701455471?text='
+        link: 'https://wa.me/9647719486880?text='
     },
     { 
-        image: 'https://placehold.co/800x400/121212/f84269?text=Ad+Banner+1',
-        link: 'https://wa.me/9647701455471?text=سڵاو%20من%20لە%20سەیارە%20ئەپەوە%20هاتووم%20و%20پێویستم%20بە%20زانیاری%20زیاتر%20لەسەر%20خزمەتگوزارییەکانتان' 
+        image: '/img/Goran-Fittary-Garok-Suly.jpg',
+        link: 'https://wa.me/9647701517198?text=سڵاو%20من%20لە%20سەیارە%20ئەپەوە%20هاتووم%20و%20پێویستم%20بە%20زانیاری%20زیاتر%20لەسەر%20خزمەتگوزارییەکانتان' 
     },
     { 
         image: 'https://placehold.co/800x400/2a2a2a/4facfe?text=Ad+Banner+2',
