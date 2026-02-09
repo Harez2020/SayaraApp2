@@ -2,7 +2,7 @@
 const slidesData = [
     {
         image: '/img/SAED-SADIQ-FITTARY-GAROK.jpg',
-        link: 'https://wa.me/9647719486880?text='
+        link: 'https://wa.me/9647719486880?text=سڵاو%20من%20لە%20سەیارە%20ئەپەوە%20هاتووم%20و%20پێویستم%20بە%20زانیاری%20زیاتر%20لەسەر%20خزمەتگوزارییەکانتان'
     },
     { 
         image: '/img/Goran-Fittary-Garok-Suly.jpg',
