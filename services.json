@@ -394,17 +394,6 @@
     "workHours": "",
     "image": "img/KrenFlatZard.jpg",
     "whatsapp": "9647702225462"
-  },
-  {
-    "id": 32,
-    "title": "کرێن فلاتی حاجی",
-    "description": "بۆ گواستنەوەی ئۆتۆمبێل",
-    "location": "سلێمانی",
-    "phones": [
-      "07701568707"
-    ],
-    "workHours": "",
-    "image": "img/TwinTruck.jpg",
-    "whatsapp": "9647701568707"
   }
+  
 ]
