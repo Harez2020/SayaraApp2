@@ -1,0 +1,14 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "online.sayara.sayaraapp.twa",
+      "sha256_cert_fingerprints": [
+        "6B:E6:4E:D3:60:97:33:08:6C:CC:0B:B2:B2:40:E2:47:0B:07:4B:7F:48:1A:F0:26:06:13:CB:72:05:05:A6:76"
+      ]
+    }
+  }
+]
